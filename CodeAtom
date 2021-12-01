@@ -1,0 +1,16 @@
+HTTPS : https://github.com/Remenby31/CodageHuffman.git
+SSH : git@github.com:Remenby31/CodageHuffman.git
+
+1.
+echo "# CodageHuffman" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Remenby31/CodageHuffman.git
+git push -u origin main
+
+2.
+git remote add origin https://github.com/Remenby31/CodageHuffman.git
+git branch -M main
+git push -u origin main
