@@ -14,3 +14,5 @@ git push -u origin main
 git remote add origin https://github.com/Remenby31/CodageHuffman.git
 git branch -M main
 git push -u origin main
+
+Terminal : export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\w\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
