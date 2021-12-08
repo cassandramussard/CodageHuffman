@@ -17,17 +17,6 @@ package body Vecteurs_Creux is
 		end Initialiser;
 
 
-<<<<<<< HEAD
-	procedure Detruire (V: in out T_Vecteur_Creux) is
-		A_detruire : T_Vecteur_Creux;
-	begin
-		while V /= Null loop
-			A_detruire := V;
-			V := V.all.suivant;
-			Free(A_detruire);
-		end loop;
-	end Detruire
-=======
 		procedure Detruire (V: in out T_Vecteur_Creux) is
 			A_detruire : T_Vecteur_Creux;
 		begin
@@ -37,7 +26,6 @@ package body Vecteurs_Creux is
 				Free(A_detruire);
 			end loop;
 		end Detruire;
->>>>>>> c191558a11726c4aaa572804040f0d2c3dd3209b
 
 
 		function Est_Nul (V : in T_Vecteur_Creux) return Boolean is
