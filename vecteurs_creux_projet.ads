@@ -22,13 +22,13 @@ package Vecteurs_Creux is
 
 
 	-- Récupérer la composante (valeur) du vecteur V à l'indice Indice.
-	function Composante_Recursif (V : in T_Vecteur_Creux ; Indice : in Integer) return Float
+	function Composante_Recursif (V : in T_Vecteur_Creux ; Frequence : in Integer) return Float
 		with Pre => Indice >= 1;
 
 	-- Modifier une composante (Indice, Valeur) d'un vecteur creux.
 	procedure Modifier (V : in out T_Vecteur_Creux ;
-				       Indice : in Integer ;
-					   Valeur : in Float ) with
+				       Frequence : in Integer ;
+					   Valeur : in Character) with
 		pre => Indice >= 1,
 		post => Composante_Recursif (V, Indice) = Valeur;
 
