@@ -1,3 +1,7 @@
-Type T_Tableau is array(1..128) of integer;
+with LCA;
+
+generic
+
+package Th is
 
 procedure Calcul_frequence(Tableau : out T_Tableau);
