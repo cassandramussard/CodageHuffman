@@ -26,7 +26,7 @@ package body Vecteurs_Creux is
 				Free(A_detruire);
 			end loop;
 		end Detruire;
-
+ff
 
 		function Est_Nul (V : in T_Vecteur_Creux) return Boolean is
 		begin
