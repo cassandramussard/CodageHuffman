@@ -5,19 +5,19 @@ package Huffman is
   type T_Tableau is array(0..128) of Integer;
 
 -- Calculer les fréquences des caractères du texte
-  procedure Calcul_Frequence(Tableau : in out T_Tableau; texte : in String) with
+  function Calcul_Frequence(texte : in String) return T_Tableau;
 
 -- Construire l'arbre de Huffman grâce aux fréquences des caractères
-  procedure Construire_Arbre(Tableau : in T_Tableau; Cellule : in T_Cellule) with
+  function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
 
 -- Afficher l'arbre de Huffman
-  procedure Afficher_Arbre(Tableau : in T_Tableau; Cellule : in T_Cellule) with
+  procedure Afficher_Arbre(Cellule : in T_Cellule) with
 
 -- Compresser le fichier
-  procedure Compresser_ficher(Tableau : in T_Tableau; Ch_Bin : in out String; caractere : in Character, texte : in String; T_char : in out T_tableau) with
+  function Compresser_ficher(texte : in String) return String;
 
 -- Décompresser le fichier
-  procedure Decompresser_fichier(Tableau : in out T_Tableau ; Ch_Arb : out String ; caracteres : in Character ) with
+  function Decompresser_fichier(texte : in String) return String;
 
 private
   package Cellule_Huffman is
