@@ -11,7 +11,7 @@ package Huffman is
   function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
 
 -- Afficher l'arbre de Huffman
-  procedure Afficher_Arbre(Cellule : in T_Cellule) with
+  procedure Afficher_Arbre(Cellule : in T_Cellule);
 
 -- Compresser le fichier
   function Compresser_ficher(texte : in String) return String;
@@ -21,6 +21,6 @@ package Huffman is
 
 private
   package Cellule_Huffman is
-    new Cellule(Fils_gauche => T_Cellule, Fils_droit => T_Cellule, Frequence => Integer, Caractere => Character)
+    new Cellule(Fils_gauche => T_Cellule, Fils_droit => T_Cellule, Frequence => Integer, Caractere => Character);
     use Cellule_Huffman;
 end Huffman;
