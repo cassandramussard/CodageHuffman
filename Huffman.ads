@@ -11,14 +11,13 @@ package Huffman is
   procedure Construire_Arbre(Tableau : in T_Tableau; Cellule : in T_Cellule) with
 
 -- Afficher l'arbre de Huffman
-  procedure Afficher_Arbre(Tableau : in T_Tableau) with
+  procedure Afficher_Arbre(Tableau : in T_Tableau; Cellule : in T_Cellule) with
 
 -- Compresser le fichier
-  procedure Compresser_ficher(Tableau : in T_Tableau; Ch_Bin : in out String; caractere : in Character, texte : in String; T_char : in out T_tableau)
+  procedure Compresser_ficher(Tableau : in T_Tableau; Ch_Bin : in out String; caractere : in Character, texte : in String; T_char : in out T_tableau) with
 
 -- Décompresser le fichier
-  procedure Decompresser_fichier(Tableau : in out T_Tableau ; Ch_Arb : out String ; caracteres : in Character )
-
+  procedure Decompresser_fichier(Tableau : in out T_Tableau ; Ch_Arb : out String ; caracteres : in Character ) with
 
 private
   package Cellule_Huffman is
