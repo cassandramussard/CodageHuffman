@@ -1,4 +1,3 @@
-
 with Cellule;
 
 package Huffman is
@@ -6,6 +5,8 @@ package Huffman is
 
 -- Calculer les fréquences des caractères du texte
   function Calcul_Frequence(texte : in String) return T_Tableau
+--Trier par ordre croissant le tableau de fréquence
+  function Tri_fusion(Tableau : in T_Tableau) return T_Tableau;
 
 -- Construire l'arbre de Huffman grâce aux fréquences des caractères
   function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
@@ -18,6 +19,10 @@ package Huffman is
 
 -- Décompresser le fichier
   function Decompresser_fichier(texte : in String) return String;
+
+  generic
+        with procedure Traiter(Frequence : in Integer; Caractere : in Character);
+  procedure Parcours_infixe(Tableau : in T_Tableau);
 
 private
   package Cellule_Huffman is
