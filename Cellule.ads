@@ -18,6 +18,7 @@ package Cellule is
 
   private
     type T_Element;
+    type T_Cellule is access T_Element;
     type T_Element is
       record
         Fils_gauche : T_Cellule;
