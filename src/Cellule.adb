@@ -90,7 +90,7 @@ package body Cellule is
       end if;
    end Supprimer;
 
-   procedure Parcrour_Infixe(Cellule : in out T_Cellule) is
+   procedure Parcours_Infixe(Cellule : in out T_Cellule) is
    begin
       if not(Est_Vide(Cellule.all.Fils_gauche)) then
          Parcrour_Infixe(Cellule.all.Fils_gauche);
