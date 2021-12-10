@@ -1,0 +1,2 @@
+Note pour cass:
+J'ai mis les codes dans src ! Pour l'instant j'ai finis Cellule je crois mais ça serait bien que tu fasse le programme de test en t'inspirant de evaluer lca. :)
