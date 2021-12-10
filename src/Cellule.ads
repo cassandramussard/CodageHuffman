@@ -23,9 +23,9 @@ package Cellule is
    function Est_Feuille(Cellule : in T_Cellule) return Boolean;
 
    -- Vérifier si le carctere est présent dans la cellule
-   function Cle_Presente(Cellule : in T_Cellule ; Cle : in T_Cle) return Boolean;
+   function Cle_Present(Cellule : in T_Cellule ; Cle : in T_Cle) return Boolean;
 
-   function La_Donnee (Cellule : in T_Cellule ; Cle : in T_Cle) return T_Donnee;
+   function La_Donnee(Cellule : in T_Cellule ; Cle : in T_Cle) return T_Donnee;
 
 
    -- Enregistrer une cellule d'une fiche avec ses fils droit et gauche, sa frequence et le caractere
@@ -40,7 +40,7 @@ package Cellule is
    -- generique avec fonction traiter
    generic
       with procedure Traiter (Cle : in T_Cle; Donnee: in T_Donnee);
-   procedure Parcrour_Infixe(Cellule : in out T_Cellule);
+   procedure Parcours_Infixe(Cellule : in out T_Cellule);
 
 
 

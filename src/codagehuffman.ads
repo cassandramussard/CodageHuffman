@@ -6,6 +6,9 @@ package Huffman is
 -- Calculer les fréquences des caractères du texte
   function Calcul_Frequence(texte : in String) return T_Tableau;
 
+-- Trier par fusion le tableau de fréquences
+  procedure Tri_fusion(Tableau : in T_Tableau);
+
 -- Construire l'arbre de Huffman grâce aux fréquences des caractères
   function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
 
