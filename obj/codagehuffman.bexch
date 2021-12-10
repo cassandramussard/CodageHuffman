@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__codagehuffman.o
+[PROJECT FILES]
+C:\Users\Remenby\github\CodageHuffman\codagehuffman.gpr
+20211209155630 2ba3aec7b083c856f799701b36aad8ce
+[BOUND OBJECT FILES]
+C:\Users\Remenby\github\CodageHuffman\obj\codagehuffman.o
+[GENERATED SOURCE FILES]
+b__codagehuffman.ads
+b__codagehuffman.adb
+b__codagehuffman.ali
+[RESULTING OPTIONS]
+-LC:\Users\Remenby\github\CodageHuffman\obj\
+-LC:\Users\Remenby\github\CodageHuffman\obj\
+-LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
+-Wl,--stack=0x2000000

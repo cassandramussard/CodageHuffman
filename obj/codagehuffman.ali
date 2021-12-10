@@ -1,0 +1,19 @@
+V "GNAT Lib v2021"
+M P W=b
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U codagehuffman%b	codagehuffman.adb	f06e589e NE OO SU
+
+D codagehuffman.adb	20211209155630 f06e589e codagehuffman%b
+D system.ads		20210520051136 2ffa5114 system%s
+G a e
+G c Z b b [codagehuffman standard 1 11 none]
+X 1 codagehuffman.adb
+1U11*Codagehuffman 1b11 6l5 6t18
+
