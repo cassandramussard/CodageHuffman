@@ -1,0 +1,50 @@
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:3:06: file "sda_exceptions.ads" not found
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:3:22: (style) horizontal tab not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:5:01: (style) horizontal tab not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:6:01: (style) horizontal tab not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:7:06: file "cellule.ads" not found
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:8:06: file "huffman.ads" not found
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:11:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:12:14: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:13:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:15:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:16:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:18:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:19:01: (style) "end Avec_Guillemets" required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:21:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:22:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:23:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:24:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:26:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:27:01: (style) "end "&"" required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:30:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:31:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:32:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:33:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:34:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:38:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:39:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:41:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:42:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:43:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:44:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:47:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:48:28: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:50:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:53:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:54:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:55:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:56:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:58:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:60:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:63:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:65:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:68:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:70:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:73:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:75:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:80:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:81:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:82:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:83:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:84:03: (style) bad indentation
