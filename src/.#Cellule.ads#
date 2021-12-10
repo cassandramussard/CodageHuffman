@@ -21,10 +21,8 @@ package Cellule is
    function Donne_Frequence(Cellule : in T_Cellule ; Caractere : in Character) return Integer;
 
    -- generique avec fonction traiter
-   procedure Parcrour_Infixe(Cellule : in out T_Cellule);
+   procedure Parcrours_Infixe(Cellule : in out T_Cellule);
 
-
-   --
 
 private
    type T_Element;
