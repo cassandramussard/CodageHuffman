@@ -1,0 +1,5 @@
+codagehuffman.adb:1:11: error: file "codagehuffman.ads" does not contain expected unit
+codagehuffman.adb:1:11: error: expected unit "Codagehuffman (spec)"
+codagehuffman.adb:1:11: error: found unit "Huffman (spec)"
+codagehuffman.adb:1:11: error: cannot compile subprogram in file "codagehuffman.adb"
+codagehuffman.adb:1:11: error: incorrect spec in file "cellule.ads" must be removed first
