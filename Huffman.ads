@@ -1,10 +1,15 @@
 with Cellule;
 
+generic
+    type T_Donnee is private;
+    type T_Cle is private;
+    type T_Cellule is private;
+
 package Huffman is
-  type T_Tableau is array(0..128) of Integer;
+  type T_Tableau is limited private;
 
 -- Calculer les fréquences des caractères du texte
-  function Calcul_Frequence(texte : in String) return T_Tableau
+  function Calcul_Frequence(texte : in String) return T_Tableau;
 --Trier par ordre croissant le tableau de fréquence
   function Tri_fusion(Tableau : in T_Tableau) return T_Tableau;
 
@@ -25,7 +30,10 @@ package Huffman is
   procedure Parcours_infixe(Tableau : in T_Tableau);
 
 private
+
   package Cellule_Huffman is
-    new Cellule(Fils_gauche => T_Cellule, Fils_droit => T_Cellule, Frequence => Integer, Caractere => Character);
-    use Cellule_Huffman;
+    new Cellule(T_Cle => T_Cle, T_Donnee => T_Donnee);
+  use Cellule_Huffman;
+
+   type T_Tableau is array(0..128) of T_Donnee;
 end Huffman;

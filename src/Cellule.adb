@@ -73,7 +73,7 @@ package body Cellule is
    end La_Donnee;
 
 
-   procedure Enregistrer(Cellule : in out T_Cellule ; Cle : in T_Cle ; Donnee : in T_Donnee; Fils_droit : in T_Cellule ; Fils_gauche : in T_Cellule) is
+   procedure Enregistrer(Cellule : in out T_Cellule ; Cle : in T_Cle ; Donnee : in T_Donnee) is
    begin
       Null;
    end Enregistrer;
