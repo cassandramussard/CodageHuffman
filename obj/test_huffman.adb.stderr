@@ -1,29 +1,38 @@
 /home/cmussard/github/CodageHuffman/src/test_huffman.adb:3:06: file "cellule_exceptions.ads" not found
 /home/cmussard/github/CodageHuffman/src/test_huffman.adb:3:26: (style) horizontal tab not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:6:06: file "cellule.ads" not found
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:12:17: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:15:31: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:18:04: (style) "end Avec_Guillemets" required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:20:22: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:23:04: (style) "end "&"" required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:28:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:29:50: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:38:25: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:40:43: (style) space not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:43:35: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:48:35: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:50:38: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:52:16: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:53:28: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:55:24: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:56:20: (style) bad capitalization, mixed case required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:58:16: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:59:28: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:64:07: (style) "begin" in wrong column, should be in column 4
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:65:18: "=" should be ":="
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:66:07: (style) "end" in wrong column, should be in column 4
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:68:36: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:73:39: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:78:42: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:84:04: (style) "begin" in wrong column, should be in column 1
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:90:04: (style) "end" in wrong column, should be in column 1
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:6:06: file "huffman.ads" not found
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:11:17: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:14:31: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:17:04: (style) "end Avec_Guillemets" required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:19:22: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:22:04: (style) "end "&"" required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:27:07: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:28:50: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:36:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:37:01: (style) horizontal tab not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:38:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:39:01: (style) horizontal tab not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:40:01: (style) horizontal tab not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:41:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:42:25: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:44:42: (style) space not allowed
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:47:35: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:48:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:49:09: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:52:35: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:54:38: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:56:16: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:57:28: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:59:24: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:60:20: (style) bad capitalization, mixed case required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:62:16: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:63:28: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:67:07: (style) "begin" in wrong column, should be in column 4
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:68:37: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:69:07: (style) "end" in wrong column, should be in column 4
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:71:39: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:73:23: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:76:42: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:78:23: (style) space required
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:82:04: (style) "begin" in wrong column, should be in column 1
+/home/cmussard/github/CodageHuffman/src/test_huffman.adb:87:04: (style) "end" in wrong column, should be in column 1
