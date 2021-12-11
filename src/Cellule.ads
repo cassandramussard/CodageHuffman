@@ -23,7 +23,7 @@ package Cellule is
    function Est_Feuille(Cellule : in T_Cellule) return Boolean;
 
    -- Vérifier si le carctere est présent dans la cellule
-   function Cle_Present(Cellule : in T_Cellule ; Cle : in T_Cle) return Boolean;
+   function Cle_Presente(Cellule : in T_Cellule ; Cle : in T_Cle) return Boolean;
 
    function La_Donnee(Cellule : in T_Cellule ; Cle : in T_Cle) return T_Donnee;
 

@@ -2,8 +2,6 @@ with Ada.Text_IO;           use Ada.Text_IO;
 with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
 with Cellule_Exceptions; 		use Cellule_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-	--! Les Unbounded_String ont une capacité variable, contrairement au String
-	--! pour lesquelles une capacité doit être fixée.
 with Cellule;
 
 procedure Test_Cellule is

@@ -93,14 +93,14 @@ package body Cellule is
    procedure Parcours_Infixe(Cellule : in out T_Cellule) is
    begin
       if not(Est_Vide(Cellule.all.Fils_gauche)) then
-         Parcrour_Infixe(Cellule.all.Fils_gauche);
+         Parcours_Infixe(Cellule.all.Fils_gauche);
       end if;
       if Est_Feuille(Cellule) then
          Traiter(Cellule.all.Cle, Cellule.all.Donnee);
       end if;
       if not(Est_Vide(Cellule.all.Fils_droit)) then
-         Parcrour_Infixe(Cellule.all.Fils_droit);
+         Parcours_Infixe(Cellule.all.Fils_droit);
       end if;
-   end Parcrour_Infixe;
+   end Parcours_Infixe;
 
 end Cellule;

@@ -1,4 +1,2 @@
-test_cellule.adb:75:25: error: missing argument for parameter "Fils_droit" in call to "Enregistrer" declared at cellule.ads:32, instance at line 11
-test_cellule.adb:208:25: error: missing argument for parameter "Fils_droit" in call to "Enregistrer" declared at cellule.ads:32, instance at line 11
-cellule.ads:38:14: error: "Cle_Presente" is undefined (more references follow)
-cellule.ads:38:14: error: possible misspelling of "Cle_Present"
+test_cellule.adb:73:25: error: missing argument for parameter "Fils_droit" in call to "Enregistrer" declared at cellule.ads:32, instance at line 9
+test_cellule.adb:206:25: error: missing argument for parameter "Fils_droit" in call to "Enregistrer" declared at cellule.ads:32, instance at line 9
