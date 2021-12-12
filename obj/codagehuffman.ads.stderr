@@ -1,15 +1,1 @@
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:2:06: file "cellule.ads" not found
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:7:17: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:10:27: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:12:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:13:29: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:15:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:16:24: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:18:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:19:29: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:21:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:22:28: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:24:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:25:30: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:27:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:28:33: (style) space required
+cannot generate code for file codagehuffman.ads (package spec)

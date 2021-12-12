@@ -2,36 +2,37 @@ with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with Cellule;
 
 generic
-    type T_Donnee is private;
-    type T_Cle is private;
+   type T_Donnee is private;
+   type T_Cle is private;
 
-package Huffman is
-    type T_Tableau is limited private;
-    type T_Cellule is limited private;
+package codageHuffman is
+   type T_Tableau is limited private;
+   type T_Cellule is limited private;
 
--- Calculer les frÃ©quences des caractÃ¨res du texte
-  function Calcul_Frequence(texte : in String) return T_Tableau;
---Trier par ordre croissant le tableau de frÃ©quence
-  function Tri_fusion(Tableau : in T_Tableau) return T_Tableau;
+   -- Calculer les frÉquences des caractères du texte
+   function Calcul_Frequence(texte : in String) return T_Tableau;
+   --Trier par ordre croissant le tableau de frÉquence
+   procedure Tri_fusion(Tableau : in out T_Tableau);
 
--- Construire l'arbre de Huffman grÃ¢ce aux frÃ©quences des caractÃ¨res
-    function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
+   -- Construire l'arbre de Huffman grâce aux fréquences des caractères
+   function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
 
--- Afficher l'arbre de Huffman
-  procedure Afficher_Arbre(Cellule : in T_Cellule);
+   -- Afficher l'arbre de Huffman
+   procedure Afficher_Arbre(Cellule : in T_Cellule);
 
--- Compresser le fichier
-  function Compresser_ficher(texte : in String) return String;
+   -- Compresser le fichier
+   function Compresser_ficher(texte : in String) return String;
 
--- DÃ©compresser le fichier
-  function Decompresser_fichier(texte : in String) return String;
+   -- Décompresser le fichier
+   function Decompresser_fichier(texte : in String) return String;
 
-  generic
-        with procedure Traiter(Frequence : in Integer; Caractere : in Character);
-  procedure Parcours_infixe(Tableau : in T_Tableau);
+   generic
+      with procedure Traiter(Frequence : in Integer; Caractere : in Character);
+   procedure Parcours_infixe(Tableau : in T_Tableau);
 
 private
-    type T_Element;
+
+   type T_Element;
 
    type T_Cellule is access T_Element;
 
@@ -42,9 +43,11 @@ private
          Fils_gauche : T_Cellule;
          Fils_droit : T_Cellule;
       end record;
-  package Cellule_Huffman is
-    new Cellule(T_Cle => T_Cle, T_Donnee => T_Donnee);
-  use Cellule_Huffman;
 
    type T_Tableau is array(0..128) of T_Donnee;
-end Huffman;
+
+   package Cellule_Huffman is
+     new Cellule(T_Cle => T_Cle, T_Donnee => T_Donnee);
+   use Cellule_Huffman;
+
+end codagehuffman;

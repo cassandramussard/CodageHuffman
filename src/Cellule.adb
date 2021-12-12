@@ -19,7 +19,7 @@ package body Cellule is
       return False;
    end;
 
-   -- Obtenir le nombre d'√©l√©ments d'une Cellule.
+   -- Obtenir le nombre d'…l…ments d'une Cellule.
    function Taille (Cellule : in T_Cellule) return Integer is
    begin
       if Est_Vide(Cellule) then

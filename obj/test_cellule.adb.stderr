@@ -1,2 +1,0 @@
-test_cellule.adb:73:25: error: missing argument for parameter "Fils_droit" in call to "Enregistrer" declared at cellule.ads:32, instance at line 9
-test_cellule.adb:206:25: error: missing argument for parameter "Fils_droit" in call to "Enregistrer" declared at cellule.ads:32, instance at line 9

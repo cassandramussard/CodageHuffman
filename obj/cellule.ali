@@ -13,18 +13,18 @@ RV NO_UNCHECKED_DEALLOCATION
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U cellule%b		cellule.adb		d3ca9052 NE OO PK GE
+U cellule%b		cellule.adb		b1d2f86c NE OO PK GE
 W ada%s			ada.ads			ada.ali
 W ada.unchecked_deallocation%s
 W cellule_exceptions%s	cellule_exceptions.ads	cellule_exceptions.ali
 
-U cellule%s		cellule.ads		7449cc44 BN EE NE OO PK GE
+U cellule%s		cellule.ads		6220c67f BN EE NE OO PK GE
 
 D ada.ads		20210520051132 76789da1 ada%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051130 c3a8ac65 ada.unchecked_deallocation%s
-D cellule.ads		20211211190936 7449cc44 cellule%s
-D cellule.adb		20211211193346 c3f225ad cellule%b
+D cellule.ads		20211212122938 6220c67f cellule%s
+D cellule.adb		20211212122938 b78347a8 cellule%b
 D cellule_exceptions.ads  20211211095820 a7d9d5de cellule_exceptions%s
 D system.ads		20210520051136 2ffa5114 system%s
 D s-exctab.ads		20210520051132 54135002 system.exception_table%s
@@ -41,9 +41,9 @@ X 4 cellule.ads
 2+9 T_Cle 26r60 28r57 32r64 36r62 42r40 55r16 5|51r60 62r58 76r64 81r62
 3+9 T_Donnee 28r71 32r84 42r58 54r19 5|62r72 76r84
 5k9*Cellule 2z9 3z9 48E9 59l5 59e12 5|4b14 106l5 106t12
-6P9*T_Cellule 9r40 11r37 15r35 18r34 23r38 26r39 28r36 32r43 32r110 32r139
-. 36r41 43r47 50c9 56r24 57r23 5|7r67 9r39 14r36 23r34 32r37 43r38 51r39
-. 62r37 76r43 76r110 76r139 81r41 93r47
+6P9*T_Cellule 9r40 11r37 15r35 18r34 23r38 26r39 28r36 32r43 36r41 43r47
+. 50c9 56r24 57r23 5|7r67 9r39 14r36 23r34 32r37 43r38 51r39 62r37 76r43
+. 81r41 93r47
 9U14*Initialiser 9<26 5|9b14 12l8 12t19
 9p26 Cellule{6P9} 5|9b26 11m7
 11U14*Vider 11=20 5|32b14 37s10 38s10 41l8 41t13
@@ -63,12 +63,10 @@ X 4 cellule.ads
 28V13*La_Donnee{3+9} 28>23 28>48 5|62b13 69s17 71s17 73l8 73t17
 28p23 Cellule{6P9} 5|62b24 64r19 66r13 67r17 68r26 69r27 71r27
 28*48 Cle{2+9} 5|62b49 66r31 68r51 69r52 71r51
-32U14*Enregistrer 32=26 32>55 32>72 32>94 32>122 5|76b14 79l8 79t19
+32U14*Enregistrer 32=26 32>55 32>72 5|76b14 79l8 79t19
 32p26 Cellule{6P9} 5|76b26
 32*55 Cle{2+9} 5|76b55
 32*72 Donnee{3+9} 5|76b72
-32p94 Fils_droit{6P9} 5|76b94
-32p122 Fils_gauche{6P9} 5|76b122
 36U14*Supprimer 36=24 36>53 5|81b14 86s10 87s10 91l8 91t17
 36p24 Cellule{6P9} 37r23 37r42 38r28 5|81b24 83r19 85r13 86r20 87r20 89m15
 36*53 Cle{2+9} 38r37 5|81b53 85r32 86r44 87r43
