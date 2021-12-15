@@ -1,5 +1,5 @@
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-with Cellule;
+with cellule;
 
 generic
    type T_Donnee is private;

@@ -51,8 +51,8 @@ private
 
    type T_Element is
       record
+      Cle : T_Cle;
          Donnee : T_Donnee;
-         Cle : T_Cle;
          Fils_gauche : T_Cellule;
          Fils_droit : T_Cellule;
       end record;
