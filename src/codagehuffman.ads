@@ -47,7 +47,7 @@ private
    type T_Tableau is array(0..128) of T_Donnee;
 
    package Cellule_Huffman is
-     new Cellule(T_Cle => T_Cle, T_Donnee => T_Donnee);
+     new Cellule(T_Cle => Character, T_Donnee => Integer);
    use Cellule_Huffman;
 
 end codagehuffman;
