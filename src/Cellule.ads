@@ -19,10 +19,10 @@ package Cellule is
      Post => Taille'Result >= 0
      and (Taille'Result = 0) = Est_Vide (Cellule);
 
-   --Vérifier si la cellule est une feuille
+   --Vï¿½rifier si la cellule est une feuille
    function Est_Feuille(Cellule : in T_Cellule) return Boolean;
 
-   -- Vérifier si le carctere est présent dans la cellule
+   -- Vï¿½rifier si le carctere est prï¿½sent dans la cellule
    function Cle_Presente(Cellule : in T_Cellule ; Cle : in T_Cle) return Boolean;
 
    function La_Donnee(Cellule : in T_Cellule ; Cle : in T_Cle) return T_Donnee;
@@ -31,16 +31,16 @@ package Cellule is
    -- Enregistrer une cellule d'une fiche avec ses fils droit et gauche, sa frequence et le caractere
    procedure Enregistrer(Cellule : in out T_Cellule ; Cle : in T_Cle ; Donnee : in T_Donnee);
 
-   -- Supprimer la Donnée associée à une Clé dans une Cellule.
-   -- Exception : Cle_Absente_Exception si Clé n'est pas utilisée dans la Cellule
+   -- Supprimer la Donnï¿½e associï¿½e ï¿½ une Clï¿½ dans une Cellule.
+   -- Exception : Cle_Absente_Exception si Clï¿½ n'est pas utilisï¿½e dans la Cellule
    procedure Supprimer(Cellule : in out T_Cellule ; Cle : in T_Cle) with
-     Post =>  Taille (Cellule) = Taille (Cellule)'Old - 1 -- un élément de moins
+     Post =>  Taille (Cellule) = Taille (Cellule)'Old - 1 -- un ï¿½lï¿½ment de moins
      and not Cle_Presente (Cellule, Cle);
 
-   -- generique avec fonction traiter
-   generic
-      with procedure Traiter (Cle : in T_Cle; Donnee: in T_Donnee);
-   procedure Parcours_Infixe(Cellule : in out T_Cellule);
+     -- generique avec fonction traiter
+     generic
+        with procedure Traiter (Cle : in out T_Cle; Donnee: in out T_Donnee);
+     procedure Parcours_Infixe(Cellule : in out T_Cellule);
 
 
 
