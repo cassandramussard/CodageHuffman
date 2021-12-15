@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/cmussard/github/CodageHuffman/src/codagehuffman.adb:3:29: (style) space required
 /home/cmussard/github/CodageHuffman/src/codagehuffman.adb:6:09: (style) bad indentation
 /home/cmussard/github/CodageHuffman/src/codagehuffman.adb:7:20: (style) space required
@@ -32,3 +33,8 @@
 /home/cmussard/github/CodageHuffman/src/codagehuffman.ads:31:29: (style) space required
 /home/cmussard/github/CodageHuffman/src/codagehuffman.ads:47:27: (style) space required
 /home/cmussard/github/CodageHuffman/src/codagehuffman.ads:50:17: (style) space required
+=======
+codagehuffman.adb:17:19: error: expected private type "Cellule_Huffman.T_Cellule" defined at cellule.ads:6, instance at codagehuffman.ads:49
+codagehuffman.adb:17:19: error: found type "codageHuffman.T_Cellule" defined at codagehuffman.ads:37
+codagehuffman.ads:27:13: error: "Decompresser_fichier" conflicts with declaration at line 21
+>>>>>>> 2a4d51acf6510141202a418cf8a28dc6f08980ae

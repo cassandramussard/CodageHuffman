@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
+<<<<<<< HEAD
     <vfs_file>/home/cmussard/github/CodageHuffman/codagehuffman.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
       <vfs_project>/home/cmussard/github/CodageHuffman/codagehuffman.gpr</vfs_project>
@@ -33,6 +34,268 @@
     <file_marker current="true" column=" 6" line=" 2" >
       <vfs_project>/home/cmussard/github/CodageHuffman/codagehuffman.gpr</vfs_project>
       <vfs_file>/home/cmussard/github/CodageHuffman/src/codagehuffman.ads</vfs_file>
+=======
+    <vfs_file>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_file>
+    <file_marker column=" 58" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\Cellule.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 48" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\test_huffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 10" line=" 73" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\test_Cellule.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 2" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\Cellule.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\Cellule.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\test_Cellule.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 14" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\test_Cellule.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 32" line=" 14" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\test_Cellule.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 45" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 43" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 52" line=" 15" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 8" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 8" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 53" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 12" line=" 11" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 52" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 18" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\Cellule.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\Cellule.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 2" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 61" line=" 14" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 18" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 23" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 28" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 33" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 18" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 61" line=" 14" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 6" line=" 45" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 17" line=" 4" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 23" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 22" line=" 10" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 56" line=" 3" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 8" line=" 33" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 29" line=" 37" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 14" line=" 1" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 15" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 21" line=" 18" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 17" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 15" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 17" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 7" line=" 15" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 19" line=" 17" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 37" >
+      <vfs_project>C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr</vfs_project>
+      <vfs_file>C:\Users\cruve\github\CodageHuffman\src\codagehuffman.ads</vfs_file>
+>>>>>>> 2a4d51acf6510141202a418cf8a28dc6f08980ae
     </file_marker>
   </Project>
 </Locations>
