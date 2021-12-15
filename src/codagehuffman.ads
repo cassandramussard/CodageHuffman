@@ -1,5 +1,5 @@
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-with Cellule;
+with cellule;
 
 package codagehuffman is
 
@@ -11,7 +11,7 @@ package codagehuffman is
 
 
     -- Calculer les fr�quences des caract�res du texte
-    function Calcul_Frequence(texte : in String) return T_Tableau;
+    procedure Calcul_Frequence(texte : in String);
     --Trier par ordre croissant le tableau de fr�quence
     function Tri(Tableau : in out T_Tableau; premier : in Integer; dernier : in Integer) return Integer;
 
@@ -32,7 +32,7 @@ package codagehuffman is
 
 private
 
-    type T_Tableau is array(0..128) of Integer;
+    type T_Tableau is array(0..256) of Integer;
 
 
 end codagehuffman;
