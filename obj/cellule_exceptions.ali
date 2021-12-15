@@ -1,26 +1,35 @@
-V "GNAT Lib v2021"
+V "GNAT Lib v9"
 A -gnatA
+A -gnatc
+A -gnatwa
+A -gnaty3
+A -gnatya
+A -gnatyb
+A -gnatyc
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyp
+A -gnatyr
+A -gnatys
+A -gnatyt
 A -mtune=generic
 A -march=x86-64
-P ZX
+P NO FX
 
 RN
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 
 U cellule_exceptions%s	cellule_exceptions.ads	a7d9d5de EE OO PK
-Z system%s		system.ads		system.ali
-Z system.exception_table%s  s-exctab.adb	s-exctab.ali
-Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20210520051132 76789da1 ada%s
-D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
-D cellule_exceptions.ads  20211210143646 a7d9d5de cellule_exceptions%s
-D system.ads		20210520051136 2ffa5114 system%s
-D s-exctab.ads		20210520051132 54135002 system.exception_table%s
-D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
-G a e
-X 3 cellule_exceptions.ads
+D cellule_exceptions.ads  20211215132830 a7d9d5de cellule_exceptions%s
+X 1 cellule_exceptions.ads
 2K9*Cellule_Exceptions 6l5 6e23
 4X9*Cle_Absente_Exception
 
