@@ -1,19 +1,105 @@
 V "GNAT Lib v2021"
-M P W=b
 A -gnatA
 A -mtune=generic
 A -march=x86-64
-P ZX
+P SS ZX
 
 RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U codagehuffman%b	codagehuffman.adb	f06e589e NE OO SU
+U codagehuffman%b	codagehuffman.adb	a55ad9fd NE OO PK GE IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 
-D codagehuffman.adb	20211209155630 f06e589e codagehuffman%b
+U codagehuffman%s	codagehuffman.ads	2da20eca BN EE NE OO PK GE
+W ada%s			ada.ads			ada.ali
+W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
+Z ada.unchecked_deallocation%s
+W cellule%s		cellule.adb		cellule.ali
+Z cellule_exceptions%s	cellule_exceptions.ads	cellule_exceptions.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051128 bf4f806b ada.finalization%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051130 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051130 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051130 c3a8ac65 ada.unchecked_deallocation%s
+D cellule.ads		20211212130106 6220c67f cellule%s
+D cellule.adb		20211212124728 b78347a8 cellule%b
+D cellule_exceptions.ads  20211211095820 a7d9d5de cellule_exceptions%s
+D codagehuffman.ads	20211212125704 4cb09a92 codagehuffman%s
+D codagehuffman.adb	20211212130302 e9ea436f codagehuffman%b
+D interfac.ads		20210520051132 edec285f interfaces%s
 D system.ads		20210520051136 2ffa5114 system%s
+D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-finroo.ads		20210520051132 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
-G c Z b b [codagehuffman standard 1 11 none]
-X 1 codagehuffman.adb
-1U11*Codagehuffman 1b11 6l5 6t18
+G c Z s b [codagehuffman standard 8 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 18|1r6 1r33
+X 7 a-string.ads
+16K13*Strings 35e16 18|1r10 1r37
+X 10 a-strunb.ads
+83K21*Unbounded 765e26 18|1w18 1r45
+X 15 cellule.ads
+2+9 T_Cle 18|50r18
+3+9 T_Donnee 18|50r34
+5k9*Cellule 59e12 18|2w6 50r10
+X 18 codagehuffman.ads
+5+9 T_Donnee 41r19 47r39 50r46
+6+9 T_Cle 42r16 50r27
+8k9*codageHuffman 5z9 6z9 35E9 53l5 53e18 19|1b14 44l5 44t18
+9A9*T_Tableau(5+9) 13r56 15r42 18r43 31r43 47c9 19|3r56 4r17 9r42 14r43 35r43
+10P9*T_Cellule 18r61 21r42 37c9 43r24 44r23 19|14r61 15r17 20r42
+13V13*Calcul_Frequence{9A9} 13>30 19|3b13 7l8 7t24
+13a30 texte{string} 19|3b30
+15U14*Tri_fusion 15=25 19|9b14 12l8 12t18
+15a25 Tableau{9A9} 19|9b25
+18V13*Construire_Arbre{10P9} 18>30 19|14b13 18l8 18t24
+18a30 Tableau{9A9} 19|14b30
+21U14*Afficher_Arbre 21>29 19|20b14 23l8 23t22
+21p29 Cellule{10P9} 19|20b29
+24V13*Compresser_ficher{string} 24>31 19|25b13 28l8 28t25
+24a31 texte{string} 19|25b31
+27V13*Decompresser_fichier{string} 27>34 19|30b13 33l8 33t28
+27a34 texte{string} 19|30b34
+30U22 Traiter 30>30 30>54
+30i30 Frequence{integer}
+30e54 Caractere{character}
+31u14*Parcours_infixe 31>30 19|35b14 38l8 38t23
+31a30 Tableau{9A9} 19|35b30
+35R9 T_Element 37r29 39c9 45e17
+41*10 Donnee{5+9}
+42*10 Cle{6+9}
+43p10 Fils_gauche{10P9}
+44p10 Fils_droit{10P9}
+49K12 Cellule_Huffman[15|5] 51r8
+X 19 codagehuffman.adb
+4a7 Tableau{18|9A9} 6r14
+15p7 Cellule{18|10P9} 17r14
 

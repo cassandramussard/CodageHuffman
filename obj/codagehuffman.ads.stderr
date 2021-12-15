@@ -1,24 +1,51 @@
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:2:06: file "cellule.ads" not found
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:8:09: warning: file name does not match unit name, should be "huffman.ads"
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:9:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:5:01: subprogram specification expected
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:6:22: protected declaration cannot be used as compilation unit
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:7:19: protected declaration cannot be used as compilation unit
 /home/cmussard/github/CodageHuffman/src/codagehuffman.ads:10:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:12:04: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:13:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:14:03: (style) two spaces required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:15:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:17:04: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:18:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:20:04: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:21:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:23:04: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:24:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:26:04: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:27:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:29:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:30:31: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:31:28: (style) space required
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:34:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:45:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:46:16: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:11:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:13:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:14:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:15:03: (style) two spaces required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:16:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:18:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:19:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:21:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:22:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:24:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:25:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:26:01: == should be =
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:30:01: (style) incorrect layout
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:34:07: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:35:29: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:36:06: (style) two spaces required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:37:24: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:39:07: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:40:29: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:41:01: declaration expected
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:43:04: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:44:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:46:01: declaration expected
 /home/cmussard/github/CodageHuffman/src/codagehuffman.ads:47:03: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:49:27: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:48:31: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:49:28: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:50:01: == should be =
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:51:07: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:52:30: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:54:07: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:55:33: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:56:01: declaration expected
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:59:29: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:60:29: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:63:01: declaration expected
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:64:05: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:65:01: == should be =
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:68:01: declaration expected
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:79:01: declaration expected
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:80:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:81:16: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:82:03: (style) bad indentation
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:84:27: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:85:01: missing "end codageHuffman;"
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:86:01: == should be =
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:88:27: (style) space required
+/home/cmussard/github/CodageHuffman/src/codagehuffman.ads:91:17: (style) space required

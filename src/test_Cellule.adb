@@ -18,15 +18,15 @@ procedure Test_Cellule is
 	end;
 
 	-- Utiliser & entre String √† gauche et Unbounded_String √† droite.  Des
-	-- guillemets sont ajout√©es autour de la Unbounded_String
-	-- Il s'agit d'un masquage de l'op√©rteur & d√©fini dans Strings.Unbounded
+	-- guillemets sont ajout…es autour de la Unbounded_String
+	-- Il s'agit d'un masquage de l'op…rteur & d…fini dans Strings.Unbounded
 	function "&" (Left: String; Right: Unbounded_String) return String is
 	begin
 		return Left & Avec_Guillemets (Right);
 	end;
 
 
-	-- Surcharge l'op√©rateur unaire "+" pour convertir une String
+	-- Surcharge l'op…rateur unaire "+" pour convertir une String
 	-- en Unbounded_String.
 	-- Cette astuce permet de simplifier l'initialisation
 	-- de cles un peu plus loin.
@@ -60,9 +60,9 @@ procedure Test_Cellule is
 
 
 	-- Initialiser l'annuaire avec les Donnees et Cles ci-dessus.
-	-- Attention, c'est √† l'appelant de lib√©rer la m√©moire associ√©e en
+	-- Attention, c'est √† l'appelant de lib…rer la m…moire associ…e en
 	-- utilisant Vider.
-	-- Si Bavard est vrai, les insertions sont trac√©es (affich√©es).
+	-- Si Bavard est vrai, les insertions sont trac…es (affich…es).
 	procedure Construire_Exemple_Sujet (Annuaire : out T_Cellule; Bavard: Boolean := False) is
 	begin
 		Initialiser (Annuaire);
@@ -73,7 +73,7 @@ procedure Test_Cellule is
 			Enregistrer(Annuaire, Cles (I), Donnees (I));
 
 			if Bavard then
-				Put_Line ("Apr√®s insertion de la cl√© " & Cles (I));
+				Put_Line ("Apr√®s insertion de la cl… " & Cles (I));
 				Afficher (Annuaire); New_Line;
 			else
 				null;
@@ -102,7 +102,7 @@ procedure Test_Cellule is
 	end Tester_Exemple_Sujet;
 
 
-	-- Tester suppression en commen√ßant par les derniers √©l√©ments ajout√©s
+	-- Tester suppression en commen√ßant par les derniers …l…ments ajout…s
 	procedure Tester_Supprimer_Inverse is
 		Annuaire : T_Cellule;
 	begin
@@ -131,7 +131,7 @@ procedure Test_Cellule is
 	end Tester_Supprimer_Inverse;
 
 
-	-- Tester suppression en commen√ßant les les premiers √©l√©ments ajout√©s
+	-- Tester suppression en commen√ßant les les premiers …l…ments ajout…s
 	procedure Tester_Supprimer is
 		Annuaire : T_Cellule;
 	begin
@@ -162,7 +162,7 @@ procedure Test_Cellule is
 
 	procedure Tester_Supprimer_Un_Element is
 
-		-- Tester supprimer sur un √©l√©ment, celui √† Indice dans Cles.
+		-- Tester supprimer sur un …l…ment, celui √† Indice dans Cles.
 		procedure Tester_Supprimer_Un_Element (Indice: in Integer) is
 			Annuaire : T_Cellule;
 		begin
@@ -195,7 +195,7 @@ procedure Test_Cellule is
 
 	procedure Tester_Remplacer_Un_Element is
 
-		-- Tester enregistrer sur un √©l√©ment pr√©sent, celui √† Indice dans Cles.
+		-- Tester enregistrer sur un …l…ment pr…sent, celui √† Indice dans Cles.
 		procedure Tester_Remplacer_Un_Element (Indice: in Integer; Nouveau: in Integer) is
 			Annuaire : T_Cellule;
 		begin
