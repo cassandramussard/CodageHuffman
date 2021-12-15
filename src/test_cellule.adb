@@ -1,8 +1,8 @@
 with Ada.Text_IO;           use Ada.Text_IO;
 with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
-with Cellule_Exceptions; 		use Cellule_Exceptions;
+with cellule_Exceptions; 		use Cellule_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-with Cellule;
+with cellule;
 
 procedure Test_Cellule is
 
@@ -18,15 +18,15 @@ procedure Test_Cellule is
 	end;
 
 	-- Utiliser & entre String Ã  gauche et Unbounded_String Ã  droite.  Des
-	-- guillemets sont ajoutÉes autour de la Unbounded_String
-	-- Il s'agit d'un masquage de l'opÉrteur & dÉfini dans Strings.Unbounded
+	-- guillemets sont ajoutï¿½es autour de la Unbounded_String
+	-- Il s'agit d'un masquage de l'opï¿½rteur & dï¿½fini dans Strings.Unbounded
 	function "&" (Left: String; Right: Unbounded_String) return String is
 	begin
 		return Left & Avec_Guillemets (Right);
 	end;
 
 
-	-- Surcharge l'opÉrateur unaire "+" pour convertir une String
+	-- Surcharge l'opï¿½rateur unaire "+" pour convertir une String
 	-- en Unbounded_String.
 	-- Cette astuce permet de simplifier l'initialisation
 	-- de cles un peu plus loin.
@@ -35,7 +35,7 @@ procedure Test_Cellule is
 
 
 	-- Afficher une Unbounded_String et un entier.
-	procedure Afficher (S : in Unbounded_String; N: in Integer) is
+	procedure Afficher (S : in out Unbounded_String; N: in out Integer) is
 	begin
 		Put (Avec_Guillemets (S));
 		Put (" : ");
@@ -60,9 +60,9 @@ procedure Test_Cellule is
 
 
 	-- Initialiser l'annuaire avec les Donnees et Cles ci-dessus.
-	-- Attention, c'est Ã  l'appelant de libÉrer la mÉmoire associÉe en
+	-- Attention, c'est Ã  l'appelant de libï¿½rer la mï¿½moire associï¿½e en
 	-- utilisant Vider.
-	-- Si Bavard est vrai, les insertions sont tracÉes (affichÉes).
+	-- Si Bavard est vrai, les insertions sont tracï¿½es (affichï¿½es).
 	procedure Construire_Exemple_Sujet (Annuaire : out T_Cellule; Bavard: Boolean := False) is
 	begin
 		Initialiser (Annuaire);
@@ -73,7 +73,7 @@ procedure Test_Cellule is
 			Enregistrer(Annuaire, Cles (I), Donnees (I));
 
 			if Bavard then
-				Put_Line ("AprÃ¨s insertion de la clÉ " & Cles (I));
+				Put_Line ("AprÃ¨s insertion de la cle " & Cles (I));
 				Afficher (Annuaire); New_Line;
 			else
 				null;
@@ -97,12 +97,13 @@ procedure Test_Cellule is
 	procedure Tester_Exemple_Sujet is
 		Annuaire : T_Cellule;
 	begin
+		Put_Line ("=== Tester_Exemple_Sujet..."); New_Line;
 		Construire_Exemple_Sujet (Annuaire, True);
 		Vider (Annuaire);
 	end Tester_Exemple_Sujet;
 
 
-	-- Tester suppression en commenÃ§ant par les derniers ÉlÉments ajoutÉs
+	-- Tester suppression en commenÃ§ant par les derniers ï¿½lï¿½ments ajoutï¿½s
 	procedure Tester_Supprimer_Inverse is
 		Annuaire : T_Cellule;
 	begin
@@ -113,6 +114,7 @@ procedure Test_Cellule is
 		for I in reverse 1..Nb_Cles loop
 
 			Supprimer (Annuaire, Cles (I));
+			Put_Line("Ok");
 
 			Put_Line ("AprÃ¨s suppression de " & Cles (I) & " :");
 			Afficher (Annuaire); New_Line;
@@ -131,7 +133,7 @@ procedure Test_Cellule is
 	end Tester_Supprimer_Inverse;
 
 
-	-- Tester suppression en commenÃ§ant les les premiers ÉlÉments ajoutÉs
+	-- Tester suppression en commenÃ§ant les les premiers ï¿½lï¿½ments ajoutï¿½s
 	procedure Tester_Supprimer is
 		Annuaire : T_Cellule;
 	begin
@@ -162,7 +164,7 @@ procedure Test_Cellule is
 
 	procedure Tester_Supprimer_Un_Element is
 
-		-- Tester supprimer sur un ÉlÉment, celui Ã  Indice dans Cles.
+		-- Tester supprimer sur un ï¿½lï¿½ment, celui Ã  Indice dans Cles.
 		procedure Tester_Supprimer_Un_Element (Indice: in Integer) is
 			Annuaire : T_Cellule;
 		begin
@@ -195,7 +197,7 @@ procedure Test_Cellule is
 
 	procedure Tester_Remplacer_Un_Element is
 
-		-- Tester enregistrer sur un ÉlÉment prÉsent, celui Ã  Indice dans Cles.
+		-- Tester enregistrer sur un ï¿½lï¿½ment prï¿½sent, celui Ã  Indice dans Cles.
 		procedure Tester_Remplacer_Un_Element (Indice: in Integer; Nouveau: in Integer) is
 			Annuaire : T_Cellule;
 		begin
@@ -273,12 +275,11 @@ procedure Test_Cellule is
 
 		Somme: Integer;
 
-		procedure Sommer(Cle: Unbounded_String; Donnee: Integer) is
+		procedure Sommer(Cle: in out Unbounded_String; Donnee: in out Integer) is
 		begin
 			Put (" + ");
 			Put (Donnee, 2);
 			New_Line;
-
 			Somme := Somme + Donnee;
 		end;
 
@@ -301,7 +302,7 @@ procedure Test_Cellule is
 
 		Somme: Integer;
 
-		procedure Sommer_Cle_Commence_Par_Q (Cle: Unbounded_String; Donnee: Integer) is
+		procedure Sommer_Cle_Commence_Par_Q (Cle: in out Unbounded_String; Donnee: in out Integer) is
 		begin
 			if To_String (Cle) (1) = 'q' then
 				Put (" + ");
@@ -328,40 +329,6 @@ procedure Test_Cellule is
 	end Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
 
 
-
-	procedure Tester_Parcours_Infixe_Somme_Len4_Erreur is
-		Annuaire : T_Cellule;
-
-		Somme: Integer;
-
-		procedure Sommer_Len4_Erreur (Cle: Unbounded_String; Donnee: Integer) is
-			Nouvelle_Exception: Exception;
-		begin
-			if Length (Cle) = 4 then
-				Put (" + ");
-				Put (Donnee, 2);
-				New_Line;
-
-				Somme := Somme + Donnee;
-			else
-				raise Nouvelle_Exception;
-			end if;
-		end;
-
-		procedure Sommer is
-			new Parcours_Infixe(Sommer_Len4_Erreur);
-
-	begin
-		Put_Line ("=== Tester_Pour_Chaque_Somme_Len4_Erreur..."); New_Line;
-		Construire_Exemple_Sujet(Annuaire);
-		Somme := 0;
-		Sommer (Annuaire);
-		pragma Assert (Somme = Somme_Donnees_Len4);
-		Vider(Annuaire);
-		New_Line;
-	end Tester_Parcours_Infixe_Somme_Len4_Erreur;
-
-
 begin
 	Tester_Exemple_Sujet;
 	Tester_Supprimer_Inverse;
@@ -372,6 +339,5 @@ begin
 	Tester_La_Donnee_Erreur;
 	Tester_Parcours_Infixe;
 	Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-	Tester_Parcours_Infixe_Somme_Len4_Erreur;
 	Put_Line ("Fin des tests : OK.");
 end Test_Cellule;
