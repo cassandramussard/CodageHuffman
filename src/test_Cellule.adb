@@ -1,93 +1,53 @@
 with Ada.Text_IO;           use Ada.Text_IO;
 with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
-with Cellule_Exceptions; 		use Cellule_Exceptions;
+with SDA_Exceptions; 		use SDA_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
+	--! Les Unbounded_String ont une capacitÃ© variable, contrairement au String
+	--! pour lesquelles une capacitÃ© doit Ãªtre fixÃ©e.
 with Cellule;
 
-procedure Test_Cellule is
+  Caractere : constant array (1..7) of Character
+			:= ('a', 'm', 'e', 'l', 'r');
+  Frequence : constant array (1..7) of Integer
+			:= (18, 10, 20, 5, 8);
+  Tableau
 
-	package Cellule_String_Integer is
-		new Cellule(T_Cle => Unbounded_String, T_Donnee => Integer);
-	use Cellule_String_Integer;
-
-
-	-- Retourner une chaÃ®ne avec des guillemets autour de S
-	function Avec_Guillemets (S: Unbounded_String) return String is
-	begin
-		return '"' & To_String (S) & '"';
-	end;
-
-	-- Utiliser & entre String Ã  gauche et Unbounded_String Ã  droite.  Des
-	-- guillemets sont ajoutÉes autour de la Unbounded_String
-	-- Il s'agit d'un masquage de l'opÉrteur & dÉfini dans Strings.Unbounded
-	function "&" (Left: String; Right: Unbounded_String) return String is
-	begin
-		return Left & Avec_Guillemets (Right);
-	end;
-
-
-	-- Surcharge l'opÉrateur unaire "+" pour convertir une String
-	-- en Unbounded_String.
-	-- Cette astuce permet de simplifier l'initialisation
-	-- de cles un peu plus loin.
-	function "+" (Item : in String) return Unbounded_String
-		renames To_Unbounded_String;
-
-
-	-- Afficher une Unbounded_String et un entier.
-	procedure Afficher (S : in Unbounded_String; N: in Integer) is
-	begin
-		Put (Avec_Guillemets (S));
-		Put (" : ");
-		Put (N, 1);
-		New_Line;
-	end Afficher;
-
-  procedure Afficher is
-          new Parcours_Infixe(Afficher);
-
-	Nb_Cles : constant Integer := 7;
-	Cles : constant array (1..Nb_Cles) of Unbounded_String
-			:= (+"a", +"e", +"f", +"p", +"k",
-				+"b", +"i");
-	Inconnu : constant  Unbounded_String := To_Unbounded_String ("Inconnu");
-
-	Donnees : constant array (1..Nb_Cles) of Integer
-			:= (10, 23, 3, 2, 1, 4, 6);
-	Somme_Donnees : constant Integer := 135;
-	Somme_Donnees_Len4 : constant Integer := 7; -- somme si Length (Cle) = 4
-	Somme_Donnees_Q: constant Integer := 103; -- somme si initiale de Cle = 'q'
-
-
+  procedure Afficher (S : in Character; N: in Integer) is
+  	begin
+  		Put (S);
+  		Put (" : ");
+  		Put (N, 1);
+  		New_Line;
+      end Afficher;
 	-- Initialiser l'annuaire avec les Donnees et Cles ci-dessus.
-	-- Attention, c'est Ã  l'appelant de libÉrer la mÉmoire associÉe en
+	-- Attention, c'est Ã  l'appelant de libÃ©rer la mÃ©moire associÃ©e en
 	-- utilisant Vider.
-	-- Si Bavard est vrai, les insertions sont tracÉes (affichÉes).
-	procedure Construire_Exemple_Sujet (Annuaire : out T_Cellule; Bavard: Boolean := False) is
+	-- Si Bavard est vrai, les insertions sont tracÃ©es (affichÃ©es).
+	procedure Construire_Exemple_Sujet (Cellule : out T_Cellule; Bavard: Boolean := False) is
 	begin
-		Initialiser (Annuaire);
-		pragma Assert (Est_Vide (Annuaire));
-		pragma Assert (Taille (Annuaire) = 0);
+		Initialiser (Cellule);
+		pragma Assert (Est_Vide (Cellule));
 
-		for I in 1..Nb_Cles loop
-			Enregistrer(Annuaire, Cles (I), Donnees (I));
+
+		for I in 1..7 loop
+			Enregistrer (Cellule, Frequence(I), Caractere(I));
 
 			if Bavard then
-				Put_Line ("AprÃ¨s insertion de la clÉ " & Cles (I));
-				Afficher (Annuaire); New_Line;
+				Put_Line ("AprÃ¨s insertion du caractere " & Caractere(I));
+				Afficher (Cellule); New_Line;
 			else
 				null;
 			end if;
 
-			pragma Assert (not Est_Vide(Annuaire));
-			pragma Assert (Taille (Annuaire) = I);
+			pragma Assert (not Est_Vide (Cellule));
+
 
 			for J in 1..I loop
-				pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
+				pragma Assert (Frequence(Cellule, Caractere(J)) = Frequence(J));
 			end loop;
 
-			for J in I+1..Nb_Cles loop
-				pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
+			for J in I+1..7 loop
+				pragma Assert (not Caractere_Present(Cellule, Caractere(J)));
 			end loop;
 
 		end loop;
@@ -95,99 +55,99 @@ procedure Test_Cellule is
 
 
 	procedure Tester_Exemple_Sujet is
-		Annuaire : T_Cellule;
+		Cellule : T_Cellule;
 	begin
-		Construire_Exemple_Sujet (Annuaire, True);
-		Vider (Annuaire);
+		Construire_Exemple_Sujet (Cellule, True);
+		Vider (Cellule);
 	end Tester_Exemple_Sujet;
 
 
-	-- Tester suppression en commenÃ§ant par les derniers ÉlÉments ajoutÉs
+	-- Tester suppression en commenÃ§ant par les derniers Ã©lÃ©ments ajoutÃ©s
 	procedure Tester_Supprimer_Inverse is
-		Annuaire : T_Cellule;
+		Cellule : T_Cellule;
 	begin
 		Put_Line ("=== Tester_Supprimer_Inverse..."); New_Line;
 
-		Construire_Exemple_Sujet (Annuaire);
+		Construire_Exemple_Sujet (Cellule);
 
-		for I in reverse 1..Nb_Cles loop
+		for I in reverse 1..7 loop
 
-			Supprimer (Annuaire, Cles (I));
+			Supprimer (Cellule, Caractere(I));
 
-			Put_Line ("AprÃ¨s suppression de " & Cles (I) & " :");
-			Afficher (Annuaire); New_Line;
+			Put_Line ("AprÃ¨s suppression de " & Caractere (I) & " :");
+			Afficher (Cellule); New_Line;
 
 			for J in 1..I-1 loop
-				pragma Assert (Cle_Presente (Annuaire, Cles (J)));
-				pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
+				pragma Assert (Caractere_Present(Cellule, Caractere(J)));
+				pragma Assert (La_Frequence(Cellule, Caractere(J)) = Frequence(J));
 			end loop;
 
-			for J in I..Nb_Cles loop
-				pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
+			for J in I..7 loop
+				pragma Assert (not Caractere_Present(Cellule, Caractere (J)));
 			end loop;
 		end loop;
 
-		Vider (Annuaire);
+		Vider (Cellule);
 	end Tester_Supprimer_Inverse;
 
 
-	-- Tester suppression en commenÃ§ant les les premiers ÉlÉments ajoutÉs
+	-- Tester suppression en commenÃ§ant les les premiers Ã©lÃ©ments ajoutÃ©s
 	procedure Tester_Supprimer is
-		Annuaire : T_Cellule;
+		Cellule : T_Cellule;
 	begin
 		Put_Line ("=== Tester_Supprimer..."); New_Line;
 
-		Construire_Exemple_Sujet (Annuaire);
+		Construire_Exemple_Sujet (Cellule);
 
-		for I in 1..Nb_Cles loop
-			Put_Line ("Suppression de " & Cles (I) & " :");
+		for I in 1..7 loop
+			Put_Line ("Suppression de " & Caractere (I) & " :");
 
-			Supprimer (Annuaire, Cles (I));
+			Supprimer (Cellule, Caractere(I));
 
-			Afficher (Annuaire); New_Line;
+			Afficher (Cellule); New_Line;
 
 			for J in 1..I loop
-				pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
+				pragma Assert (not Caractere_Present(Cellule, Caractere (J)));
 			end loop;
 
-			for J in I+1..Nb_Cles loop
-				pragma Assert (Cle_Presente (Annuaire, Cles (J)));
-				pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
+			for J in I+1..7 loop
+				pragma Assert (Caractere_Present(Cellule,Caractere(J)));
+				pragma Assert (La_Frequence(Annuaire, Caractere(J)) = Frequence (J));
 			end loop;
 		end loop;
 
-		Vider (Annuaire);
+		Vider (Cellule);
 	end Tester_Supprimer;
 
 
 	procedure Tester_Supprimer_Un_Element is
 
-		-- Tester supprimer sur un ÉlÉment, celui Ã  Indice dans Cles.
+		-- Tester supprimer sur un Ã©lÃ©ment, celui Ã  Indice dans Cles.
 		procedure Tester_Supprimer_Un_Element (Indice: in Integer) is
-			Annuaire : T_Cellule;
+			Cellule : T_Cellule;
 		begin
-			Construire_Exemple_Sujet (Annuaire);
+			Construire_Exemple_Sujet (Cellule);
 
-			Put_Line ("Suppression de " & Cles (Indice) & " :");
-			Supprimer (Annuaire, Cles (Indice));
+			Put_Line ("Suppression de " & Caractere (Indice) & " :");
+			Supprimer (Cellule, Caractere (Indice));
 
-			Afficher (Annuaire); New_Line;
+			Afficher (Cellule); New_Line;
 
-			for J in 1..Nb_Cles loop
+			for J in 1..7 loop
 				if J = Indice then
-					pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
+					pragma Assert (not Caractere_Present (Cellule, Caractere(J)));
 				else
-					pragma Assert (Cle_Presente (Annuaire, Cles (J)));
+					pragma Assert (Caractere_Present (Cellule, Caractere(J)));
 				end if;
 			end loop;
 
-			Vider (Annuaire);
+			Vider (Cellule);
 		end Tester_Supprimer_Un_Element;
 
 	begin
 		Put_Line ("=== Tester_Supprimer_Un_Element..."); New_Line;
 
-		for I in 1..Nb_Cles loop
+		for I in 1..7 loop
 			Tester_Supprimer_Un_Element (I);
 		end loop;
 	end Tester_Supprimer_Un_Element;
@@ -195,34 +155,34 @@ procedure Test_Cellule is
 
 	procedure Tester_Remplacer_Un_Element is
 
-		-- Tester enregistrer sur un ÉlÉment prÉsent, celui Ã  Indice dans Cles.
+		-- Tester enregistrer sur un Ã©lÃ©ment prÃ©sent, celui Ã  Indice dans Cles.
 		procedure Tester_Remplacer_Un_Element (Indice: in Integer; Nouveau: in Integer) is
-			Annuaire : T_Cellule;
+			Cellule : T_Cellule;
 		begin
-			Construire_Exemple_Sujet (Annuaire);
+			Construire_Exemple_Sujet (Cellule);
 
-			Put_Line ("Remplacement de " & Cles (Indice)
+			Put_Line ("Remplacement de " & Caractere(Indice)
 					& " par " & Integer'Image(Nouveau) & " :");
-			enregistrer (Annuaire, Cles (Indice), Nouveau);
+			Enregistrer(Cellule, Caractere(Indice), Nouveau);
 
-			Afficher (Annuaire); New_Line;
+			Afficher (Cellule); New_Line;
 
-			for J in 1..Nb_Cles loop
-				pragma Assert (Cle_Presente (Annuaire, Cles (J)));
+			for J in 1..7 loop
+				pragma Assert (Caractere_Present (Cellule, Caractere(J)));
 				if J = Indice then
-					pragma Assert (La_Donnee (Annuaire, Cles (J)) = Nouveau);
+					pragma Assert (La_Frequence (Cellule, Caractere(J)) = Nouveau);
 				else
-					pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
+					pragma Assert (La_Frequence (Cellule, Caractere (J)) = Frequence (J));
 				end if;
 			end loop;
 
-			Vider (Annuaire);
+			Vider (Cellule);
 		end Tester_Remplacer_Un_Element;
 
 	begin
 		Put_Line ("=== Tester_Remplacer_Un_Element..."); New_Line;
 
-		for I in 1..Nb_Cles loop
+		for I in 1..7 loop
 			Tester_Remplacer_Un_Element (I, 0);
 			null;
 		end loop;
@@ -230,136 +190,44 @@ procedure Test_Cellule is
 
 
 	procedure Tester_Supprimer_Erreur is
-		Annuaire : T_Cellule;
+		Cellule : T_Cellule;
 	begin
 		begin
 			Put_Line ("=== Tester_Supprimer_Erreur..."); New_Line;
 
-			Construire_Exemple_Sujet (Annuaire);
-			Supprimer (Annuaire, Inconnu);
+			Construire_Exemple_Sujet (Cellule);
+			Supprimer (Cellule, Inconnu);
 
 		exception
-			when Cle_Absente_Exception =>
+			when Caractere_Absente_Exception =>
 				null;
 			when others =>
 				pragma Assert (False);
 		end;
-		Vider (Annuaire);
+		Vider (Cellule);
 	end Tester_Supprimer_Erreur;
 
 
-	procedure Tester_La_Donnee_Erreur is
-		Annuaire : T_Cellule;
+	procedure Tester_La_Frequence_Erreur is
+		Cellule: T_Cellule;
 		Inutile: Integer;
 	begin
 		begin
-			Put_Line ("=== Tester_La_Donnee_Erreur..."); New_Line;
+			Put_Line ("=== Tester_La_Frequence_Erreur..."); New_Line;
 
-			Construire_Exemple_Sujet (Annuaire);
-			Inutile := La_Donnee (Annuaire, Inconnu);
+			Construire_Exemple_Sujet (Cellule);
+			Inutile := La_Donnee (Cellule, Inconnu);
 
 		exception
-			when Cle_Absente_Exception =>
+			when Caractere_Absente_Exception =>
 				null;
 			when others =>
 				pragma Assert (False);
 		end;
-		Vider (Annuaire);
-	end Tester_La_Donnee_Erreur;
+		Vider (Cellule);
+	end Tester_La_Frequence_Erreur;
 
 
-	procedure Tester_Parcours_Infixe is
-		Annuaire : T_Cellule;
-
-		Somme: Integer;
-
-		procedure Sommer(Cle: Unbounded_String; Donnee: Integer) is
-		begin
-			Put (" + ");
-			Put (Donnee, 2);
-			New_Line;
-
-			Somme := Somme + Donnee;
-		end;
-
-		procedure Sommer is
-			new Parcours_Infixe(Sommer);
-
-	begin
-		Put_Line ("=== Tester_Pour_Chaque..."); New_Line;
-		Construire_Exemple_Sujet(Annuaire);
-		Somme := 0;
-		Sommer (Annuaire);
-		pragma Assert (Somme = Somme_Donnees);
-		Vider(Annuaire);
-		New_Line;
-	end Tester_Parcours_Infixe;
-
-
-	procedure Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q is
-		Annuaire : T_Cellule;
-
-		Somme: Integer;
-
-		procedure Sommer_Cle_Commence_Par_Q (Cle: Unbounded_String; Donnee: Integer) is
-		begin
-			if To_String (Cle) (1) = 'q' then
-				Put (" + ");
-				Put (Donnee, 2);
-				New_Line;
-
-				Somme := Somme + Donnee;
-			else
-				null;
-			end if;
-		end;
-
-		procedure Sommer is
-			new Parcours_Infixe (Sommer_Cle_Commence_Par_Q);
-
-	begin
-		Put_Line ("=== Tester_Pour_Chaque_Somme_Si_Cle_Commence_Par_Q..."); New_Line;
-		Construire_Exemple_Sujet(Annuaire);
-		Somme := 0;
-		Sommer (Annuaire);
-		pragma Assert (Somme = Somme_Donnees_Q);
-		Vider(Annuaire);
-		New_Line;
-	end Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-
-
-
-	procedure Tester_Parcours_Infixe_Somme_Len4_Erreur is
-		Annuaire : T_Cellule;
-
-		Somme: Integer;
-
-		procedure Sommer_Len4_Erreur (Cle: Unbounded_String; Donnee: Integer) is
-			Nouvelle_Exception: Exception;
-		begin
-			if Length (Cle) = 4 then
-				Put (" + ");
-				Put (Donnee, 2);
-				New_Line;
-
-				Somme := Somme + Donnee;
-			else
-				raise Nouvelle_Exception;
-			end if;
-		end;
-
-		procedure Sommer is
-			new Parcours_Infixe(Sommer_Len4_Erreur);
-
-	begin
-		Put_Line ("=== Tester_Pour_Chaque_Somme_Len4_Erreur..."); New_Line;
-		Construire_Exemple_Sujet(Annuaire);
-		Somme := 0;
-		Sommer (Annuaire);
-		pragma Assert (Somme = Somme_Donnees_Len4);
-		Vider(Annuaire);
-		New_Line;
-	end Tester_Parcours_Infixe_Somme_Len4_Erreur;
 
 
 begin
@@ -369,9 +237,6 @@ begin
 	Tester_Supprimer_Un_Element;
 	Tester_Remplacer_Un_Element;
 	Tester_Supprimer_Erreur;
-	Tester_La_Donnee_Erreur;
-	Tester_Parcours_Infixe;
-	Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-	Tester_Parcours_Infixe_Somme_Len4_Erreur;
+	Tester_La_DFrequence_Erreur;
 	Put_Line ("Fin des tests : OK.");
-end Test_Cellule;
+end Test_LCA;
