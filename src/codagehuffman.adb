@@ -3,10 +3,15 @@ package body codagehuffman is
    function Calcul_Frequence(texte : in String) return T_Tableau is
       Tableau : T_Tableau;
    begin
+        for i in 1..128 loop
+            Tableau(i) := 0 ;
+        end loop ;
+
         for i in texte'range loop
             Tableau(Character'Pos (i)) := Tableau(Character'Pos (i)) +1;
         end loop;
 
+        return Tableau;
    end Calcul_Frequence;
 
    procedure Tri_fusion(Tableau : in out T_Tableau) is
