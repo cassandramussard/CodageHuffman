@@ -22,7 +22,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_ASPECT_SPECIFICATIONS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U test_cellule%b	test_cellule.adb	d04c4235 NE OO SU
+U test_cellule%b	test_cellule.adb	fea73625 NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
@@ -66,8 +66,8 @@ D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
 D a-tiinio.ads		20210520051130 390edddb ada.text_io.integer_io%s
 D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
 D a-uncdea.ads		20210520051130 c3a8ac65 ada.unchecked_deallocation%s
-D cellule.ads		20211212122938 6220c67f cellule%s
-D cellule.adb		20211212122938 b78347a8 cellule%b
+D cellule.ads		20211215130540 6220c67f cellule%s
+D cellule.adb		20211215130748 cb1b2a21 cellule%b
 D cellule_exceptions.ads  20211211095820 a7d9d5de cellule_exceptions%s
 D interfac.ads		20210520051132 edec285f interfaces%s
 D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
@@ -100,7 +100,7 @@ D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
 D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
 D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
 D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
-D test_cellule.adb	20211211191722 4e385f7a test_cellule%b
+D test_cellule.adb	20211215130132 60d32b6a test_cellule%b
 D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
 G a e
 G c Z b b [test_cellule standard 7 11 none]
@@ -162,7 +162,7 @@ X 53 test_cellule.adb
 9K17 Cellule_String_Integer[19|5] 11r13
 15V18 Avec_Guillemets{string} 15b18 15>35 18t12 25s31 40s22
 15r35 S{12|88R9} 17r41
-23V19 "&"{string} 23b19 23>23 23>37 26t12 76s74 117s60 143s53 171s53 204s54
+23V19 "&"{string} 23b19 23>23 23>37 26t12 76s73 117s60 143s53 171s53 204s54
 23a23 Left{string} 25r24
 23r37 Right{12|88R9} 25r48
 33V19 "+"=34:25{12|88R9} 51s29 51s35 51s41 51s47 51s53 52s33 52s39
@@ -173,7 +173,7 @@ X 53 test_cellule.adb
 46U13 Afficher[19|43] 77s33 118s25 147s25 174s25 208s25
 49i9 Nb_Cles{integer} 50r35 55r38 72r29 89r39 113r37 125r37 142r29 153r39
 . 176r37 190r29 210r37 225r29
-50a9 Cles(12|88R9) 73r47 76r76 86r69 90r76 115r46 117r62 121r72 122r69 126r76
+50a9 Cles(12|88R9) 73r47 76r75 86r69 90r76 115r46 117r62 121r72 122r69 126r76
 . 143r55 145r46 150r76 154r72 155r69 171r55 172r46 178r84 180r80 204r56 206r48
 . 211r72 213r77 215r77
 53r9 Inconnu{12|88R9} 239r46 259r57
@@ -186,7 +186,7 @@ X 53 test_cellule.adb
 66p45 Annuaire{19|6P9[9]} 68m30 69r42 70r40 73m37 77m43 82r53 83r48 86r59
 . 90r66
 66b71 Bavard{boolean} 75r28
-72i21 I{integer} 73r53 73r66 76r82 83r60 85r37 89r34
+72i21 I{integer} 73r53 73r66 76r81 83r60 85r37 89r34
 85i29 J{integer} 86r75 86r90
 89i29 J{integer} 90r82
 97U19 Tester_Exemple_Sujet 97b19 102l13 102t33 366s9

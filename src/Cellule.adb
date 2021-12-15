@@ -19,7 +19,7 @@ package body Cellule is
       return False;
    end;
 
-   -- Obtenir le nombre d'ÉlÉments d'une Cellule.
+   -- Obtenir le nombre d'ï¿½lï¿½ments d'une Cellule.
    function Taille (Cellule : in T_Cellule) return Integer is
    begin
       if Est_Vide(Cellule) then
@@ -74,8 +74,12 @@ package body Cellule is
 
 
    procedure Enregistrer(Cellule : in out T_Cellule ; Cle : in T_Cle ; Donnee : in T_Donnee) is
+      C_new : T_Cellule;
    begin
-      Null;
+      Initialiser(C_new);
+      C_new.All.Cle := Cle;
+      C_new.All.Donnee := Donnee;
+      Cellule.All.Fils_droit := C_new;
    end Enregistrer;
 
    Procedure Supprimer(Cellule : in out T_Cellule ; Cle : in T_Cle) is

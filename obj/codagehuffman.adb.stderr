@@ -1,2 +1,3 @@
 codagehuffman.adb:17:19: error: expected private type "Cellule_Huffman.T_Cellule" defined at cellule.ads:6, instance at codagehuffman.ads:49
 codagehuffman.adb:17:19: error: found type "codageHuffman.T_Cellule" defined at codagehuffman.ads:37
+codagehuffman.ads:27:13: error: "Decompresser_fichier" conflicts with declaration at line 21
