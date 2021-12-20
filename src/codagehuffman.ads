@@ -1,5 +1,5 @@
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-with cellule;
+with arbre;
 
 package codagehuffman is
 
