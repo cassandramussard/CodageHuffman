@@ -1,6 +1,5 @@
 with Ada.Text_IO;           use Ada.Text_IO;
 with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
-<<<<<<< HEAD
 with arbre_Exceptions; 		use arbre_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 with arbre;
@@ -65,18 +64,17 @@ procedure Test_arbre is
 	-- utilisant Vider.
 	-- Si Bavard est vrai, les insertions sont trac�es (affich�es).
 	procedure Construire_Exemple_Sujet (Annuaire : out T_arbre; Bavard: Boolean := False) is
-=======
-with SDA_Exceptions; 		use SDA_Exceptions;
+with arbre_exceptions; 		use arbre_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
 	--! Les Unbounded_String ont une capacité variable, contrairement au String
 	--! pour lesquelles une capacité doit être fixée.
-with Cellule;
+with arbre;
 
   Caractere : constant array (1..7) of Character
 			:= ('a', 'm', 'e', 'l', 'r');
   Frequence : constant array (1..7) of Integer
 			:= (18, 10, 20, 5, 8);
-  Tableau
+  --Tableau
 
   procedure Afficher (S : in Character; N: in Integer) is
   	begin
@@ -90,7 +88,6 @@ with Cellule;
 	-- utilisant Vider.
 	-- Si Bavard est vrai, les insertions sont tracées (affichées).
 	procedure Construire_Exemple_Sujet (arbre : out T_arbre; Bavard: Boolean := False) is
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 	begin
 		Initialiser (arbre);
 		pragma Assert (Est_Vide (arbre));
@@ -100,13 +97,10 @@ with Cellule;
 			Enregistrer (arbre, Frequence(I), Caractere(I));
 
 			if Bavard then
-<<<<<<< HEAD
 				Put_Line ("Après insertion de la cle " & Cles (I));
 				Afficher (Annuaire); New_Line;
-=======
 				Put_Line ("Après insertion du caractere " & Caractere(I));
 				Afficher (arbre); New_Line;
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 			else
 				null;
 			end if;
@@ -129,7 +123,6 @@ with Cellule;
 	procedure Tester_Exemple_Sujet is
 		arbre : T_arbre;
 	begin
-<<<<<<< HEAD
 		Put_Line ("=== Tester_Exemple_Sujet..."); New_Line;
 		Construire_Exemple_Sujet (Annuaire, True);
 		Vider (Annuaire);
@@ -137,14 +130,12 @@ with Cellule;
 
 
 	-- Tester suppression en commençant par les derniers �l�ments ajout�s
-=======
 		Construire_Exemple_Sujet (arbre, True);
 		Vider (arbre);
 	end Tester_Exemple_Sujet;
 
 
 	-- Tester suppression en commençant par les derniers éléments ajoutés
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 	procedure Tester_Supprimer_Inverse is
 		arbre : T_arbre;
 	begin
@@ -154,12 +145,9 @@ with Cellule;
 
 		for I in reverse 1..7 loop
 
-<<<<<<< HEAD
 			Supprimer (Annuaire, Cles (I));
 			Put_Line("Ok");
-=======
 			Supprimer (arbre, Caractere(I));
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 
 			Put_Line ("Après suppression de " & Caractere (I) & " :");
 			Afficher (arbre); New_Line;
@@ -178,11 +166,8 @@ with Cellule;
 	end Tester_Supprimer_Inverse;
 
 
-<<<<<<< HEAD
 	-- Tester suppression en commençant les les premiers �l�ments ajout�s
-=======
 	-- Tester suppression en commençant les les premiers éléments ajoutés
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 	procedure Tester_Supprimer is
 		arbre : T_arbre;
 	begin
@@ -213,11 +198,8 @@ with Cellule;
 
 	procedure Tester_Supprimer_Un_Element is
 
-<<<<<<< HEAD
 		-- Tester supprimer sur un �l�ment, celui à Indice dans Cles.
-=======
 		-- Tester supprimer sur un élément, celui à Indice dans Cles.
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 		procedure Tester_Supprimer_Un_Element (Indice: in Integer) is
 			arbre : T_arbre;
 		begin
@@ -250,11 +232,7 @@ with Cellule;
 
 	procedure Tester_Remplacer_Un_Element is
 
-<<<<<<< HEAD
-		-- Tester enregistrer sur un �l�ment pr�sent, celui à Indice dans Cles.
-=======
 		-- Tester enregistrer sur un élément présent, celui à Indice dans Cles.
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 		procedure Tester_Remplacer_Un_Element (Indice: in Integer; Nouveau: in Integer) is
 			arbre : T_arbre;
 		begin
@@ -323,7 +301,6 @@ with Cellule;
 			when others =>
 				pragma Assert (False);
 		end;
-<<<<<<< HEAD
 		Vider (Annuaire);
 	end Tester_La_Donnee_Erreur;
 
@@ -385,12 +362,10 @@ with Cellule;
 		Vider(Annuaire);
 		New_Line;
 	end Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-=======
 		Vider (arbre);
 	end Tester_La_Frequence_Erreur;
 
 
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 
 
 begin
@@ -400,12 +375,9 @@ begin
 	Tester_Supprimer_Un_Element;
 	Tester_Remplacer_Un_Element;
 	Tester_Supprimer_Erreur;
-<<<<<<< HEAD
 	Tester_La_Donnee_Erreur;
 	Tester_Parcours_Infixe;
 	Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-=======
 	Tester_La_DFrequence_Erreur;
->>>>>>> 97ae602963d5c2a58b04745ba3bf662e3c5631cb
 	Put_Line ("Fin des tests : OK.");
 end Test_LCA;
