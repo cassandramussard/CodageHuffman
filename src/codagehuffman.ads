@@ -11,7 +11,7 @@ package codagehuffman is
 
 
     -- Calculer les fr�quences des caract�res du texte
-    procedure Calcul_Frequence(texte : in String);
+    function Calcul_Frequence(texte : in String) return T_Tableau;
     --Trier par ordre croissant le tableau de fr�quence
     function Tri(Tableau : in out T_Tableau; premier : in Integer; dernier : in Integer) return Integer;
 

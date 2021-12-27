@@ -1,7 +1,5 @@
 package body codagehuffman is
 
-
-
     procedure Calcul_Frequence(texte : in String) is
         Tableau : T_Tableau;
     begin
