@@ -1,34 +1,4 @@
-test_arbre.adb:3:01: error: compilation unit expected
-test_arbre.adb:4:01: error: misplaced "with"
-test_arbre.adb:68:01: error: == should be =
-test_arbre.adb:69:01: error: aspect specifications not allowed here
-test_arbre.adb:70:01: error: "with" can only appear in context clause
-test_arbre.adb:73:06: warning: "Cellule" is not a valid aspect identifier [enabled by default]
-test_arbre.adb:79:03: error: declaration expected
-test_arbre.adb:93:01: error: declaration expected
-test_arbre.adb:103:03: error: identifier expected
-test_arbre.adb:106:01: error: == should be =
-test_arbre.adb:109:01: error: statement expected
-test_arbre.adb:132:03: error: identifier expected
-test_arbre.adb:140:01: error: == should be =
-test_arbre.adb:160:01: error: statement expected
-test_arbre.adb:162:01: error: statement expected
-test_arbre.adb:181:01: error: declaration expected
-test_arbre.adb:183:01: error: == should be =
-test_arbre.adb:185:11: error: delimiter required between literal and identifier
-test_arbre.adb:216:01: error: declaration expected
-test_arbre.adb:218:01: error: == should be =
-test_arbre.adb:220:11: error: delimiter required between literal and identifier
-test_arbre.adb:253:01: error: declaration expected
-test_arbre.adb:255:01: error: == should be =
-test_arbre.adb:257:11: error: delimiter required between literal and identifier
-test_arbre.adb:326:03: error: identifier expected
-test_arbre.adb:328:09: error: "end Tester_La_Frequence_Erreur;" expected
-test_arbre.adb:388:01: error: == should be =
-test_arbre.adb:390:09: error: no "begin" for this "end"
-test_arbre.adb:393:01: error: statement expected
-test_arbre.adb:403:03: error: identifier expected
-test_arbre.adb:407:01: error: == should be =
-test_arbre.adb:409:01: error: statement expected
-test_arbre.adb:411:01: error: "end;" expected for "begin" at line 396
-test_arbre.adb:411:14: error: missing "end Test_arbre;"
+test_arbre.adb:67:01: error: aspect specifications not allowed here
+test_arbre.adb:68:01: error: "with" can only appear in context clause
+test_arbre.adb:71:06: warning: "arbre" is not a valid aspect identifier [enabled by default]
+test_arbre.adb:133:17: error: missing "begin" for procedure "Construire_Exemple_Sujet" at line 66

@@ -1,22 +1,2 @@
-test_huffman.adb:50:23: error: "Calcul_Frequence" is not visible
-test_huffman.adb:50:23: error: non-visible declaration at codagehuffman.ads:14
-test_huffman.adb:53:50: error: "T_Tableau" is not visible (more references follow)
-test_huffman.adb:53:50: error: non-visible declaration at codagehuffman.ads:10
-test_huffman.adb:57:35: error: prefix of dereference must be an access type
-test_huffman.adb:58:17: error: must instantiate generic procedure "Parcours_Infixe" before call
-test_huffman.adb:58:39: error: prefix of dereference must be an access type
-test_huffman.adb:61:37: error: prefix of dereference must be an access type
-test_huffman.adb:63:35: error: prefix of dereference must be an access type
-test_huffman.adb:64:17: error: must instantiate generic procedure "Parcours_Infixe" before call
-test_huffman.adb:64:39: error: prefix of dereference must be an access type
-test_huffman.adb:70:09: error: "Construire_Arbre" is not visible
-test_huffman.adb:70:09: error: non-visible declaration at codagehuffman.ads:21
-test_huffman.adb:73:05: error: missing body for "Test_Tri_rapide"
-test_huffman.adb:73:103: error: "is" should be ";"
-test_huffman.adb:77:23: error: "Compresser_fichier" is undefined
-test_huffman.adb:82:23: error: "Decompresser_fichier" is not visible
-test_huffman.adb:82:23: error: non-visible declaration at codagehuffman.ads:24
-test_huffman.adb:87:05: error: missing argument for parameter "texte" in call to "Test_Calcul_Frequence" declared at line 48
-test_huffman.adb:88:05: error: missing argument for parameter "Tableau" in call to "Test_Construire_Arbre" declared at line 53
-test_huffman.adb:89:05: error: missing argument for parameter "texte" in call to "Test_Compresser_Ficher" declared at line 75
-test_huffman.adb:90:05: error: missing argument for parameter "texte" in call to "Test_Decompresser_Fichier" declared at line 80
+test_huffman.adb:91:03: error: missing "begin" for procedure "Test_Huffman" at line 8
+test_huffman.adb:91:04: error: "end Test_Tri_rapide;" expected
