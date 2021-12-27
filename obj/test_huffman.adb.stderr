@@ -1,38 +1,22 @@
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:3:06: file "cellule_exceptions.ads" not found
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:3:26: (style) horizontal tab not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:6:06: file "huffman.ads" not found
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:11:17: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:14:31: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:17:04: (style) "end Avec_Guillemets" required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:19:22: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:22:04: (style) "end "&"" required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:27:07: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:28:50: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:36:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:37:01: (style) horizontal tab not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:38:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:39:01: (style) horizontal tab not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:40:01: (style) horizontal tab not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:41:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:42:25: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:44:42: (style) space not allowed
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:47:35: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:48:05: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:49:09: (style) bad indentation
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:52:35: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:54:38: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:56:16: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:57:28: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:59:24: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:60:20: (style) bad capitalization, mixed case required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:62:16: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:63:28: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:67:07: (style) "begin" in wrong column, should be in column 4
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:68:37: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:69:07: (style) "end" in wrong column, should be in column 4
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:71:39: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:73:23: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:76:42: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:78:23: (style) space required
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:82:04: (style) "begin" in wrong column, should be in column 1
-/home/cmussard/github/CodageHuffman/src/test_huffman.adb:87:04: (style) "end" in wrong column, should be in column 1
+test_huffman.adb:50:23: error: "Calcul_Frequence" is not visible
+test_huffman.adb:50:23: error: non-visible declaration at codagehuffman.ads:14
+test_huffman.adb:53:50: error: "T_Tableau" is not visible (more references follow)
+test_huffman.adb:53:50: error: non-visible declaration at codagehuffman.ads:10
+test_huffman.adb:57:35: error: prefix of dereference must be an access type
+test_huffman.adb:58:17: error: must instantiate generic procedure "Parcours_Infixe" before call
+test_huffman.adb:58:39: error: prefix of dereference must be an access type
+test_huffman.adb:61:37: error: prefix of dereference must be an access type
+test_huffman.adb:63:35: error: prefix of dereference must be an access type
+test_huffman.adb:64:17: error: must instantiate generic procedure "Parcours_Infixe" before call
+test_huffman.adb:64:39: error: prefix of dereference must be an access type
+test_huffman.adb:70:09: error: "Construire_Arbre" is not visible
+test_huffman.adb:70:09: error: non-visible declaration at codagehuffman.ads:21
+test_huffman.adb:73:05: error: missing body for "Test_Tri_rapide"
+test_huffman.adb:73:103: error: "is" should be ";"
+test_huffman.adb:77:23: error: "Compresser_fichier" is undefined
+test_huffman.adb:82:23: error: "Decompresser_fichier" is not visible
+test_huffman.adb:82:23: error: non-visible declaration at codagehuffman.ads:24
+test_huffman.adb:87:05: error: missing argument for parameter "texte" in call to "Test_Calcul_Frequence" declared at line 48
+test_huffman.adb:88:05: error: missing argument for parameter "Tableau" in call to "Test_Construire_Arbre" declared at line 53
+test_huffman.adb:89:05: error: missing argument for parameter "texte" in call to "Test_Compresser_Ficher" declared at line 75
+test_huffman.adb:90:05: error: missing argument for parameter "texte" in call to "Test_Decompresser_Fichier" declared at line 80

@@ -1,15 +1,15 @@
 with Ada.Text_IO;           use Ada.Text_IO;
 with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
-with Cellule_Exceptions; 	use Cellule_Exceptions;
+with Arbre_Exceptions; 	use Arbre_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-with cellule;
+with arbre;
 with codagehuffman;
 
 procedure Test_Huffman is
 
-package Cellule_String_Integer is
-		new cellule(T_Cle => Unbounded_String, T_Donnee => Integer);
-	use Cellule_String_Integer;
+package Arbre_String_Integer is
+		new arbre(T_Cle => Unbounded_String, T_Donnee => Integer);
+	use Arbre_String_Integer;
 
     function Avec_Guillemets (S: Unbounded_String) return String is
     begin
@@ -25,7 +25,7 @@ package Cellule_String_Integer is
                  renames To_Unbounded_String;
 
     -- Afficher une Unbounded_String et un entier.
-    procedure Afficher (S : in Unbounded_String; N: in Integer) is
+    procedure Afficher (S : in out Unbounded_String; N: in out Integer) is
     begin
         Put (Avec_Guillemets (S));
         Put (" : ");
@@ -38,6 +38,7 @@ package Cellule_String_Integer is
     Cles : constant array (1..10) of Unbounded_String
             := (+"\n", +" ", +":", +"d", +"e",
                 +"l", +"m", +"p", +"t", +"x");
+
     procedure Afficher is
             new Parcours_Infixe(Afficher);
 
@@ -51,26 +52,25 @@ package Cellule_String_Integer is
 
     procedure Test_Construire_Arbre(Tableau : in T_Tableau) is
 
-        procedure Parcours_Infixe_verif(Cellule : in T_Cellule; Feuilles : in Unbounded_String) is
+        procedure Parcours_Infixe_verif(Arbre : in T_Arbre; Feuilles : in Unbounded_String) is
         begin
-            if not(Est_Vide(Cellule.all.Fils_gauche)) then
-                Parcours_Infixe(Cellule.all.Fils_gauche);
+            if not(Est_Vide(Arbre.all.Fils_gauche)) then
+                Parcours_Infixe(Arbre.all.Fils_gauche);
             end if;
-            if Est_Feuille(Cellule) then
-                pragma assert(Cellule.All.Cle = Unbounded_String(0));
+            if Est_Feuille(Arbre) then
+                pragma assert(Arbre.All.Cle = Unbounded_String(0));
             end if;
-            if not(Est_Vide(Cellule.all.Fils_droit)) then
-                Parcours_Infixe(Cellule.all.Fils_droit);
+            if not(Est_Vide(Arbre.all.Fils_droit)) then
+                Parcours_Infixe(Arbre.all.Fils_droit);
             end if;
         end Parcours_Infixe_verif;
-        Feuille : string := " ipnCsItcxmu";
+      Feuille : string := " ipnCsItcxmu";
+      arbre : T_arbre;
     begin
-        Cellule := Construire_Arbre(Tableau);
+        Construire_Arbre(Tableau, Arbre);
     end Test_Construire_Arbre;
 
     procedure Test_Tri_rapide(Tableau : in out T_Tableau; premier : in Integer; dernier : in Integer) is
-
-
 
     procedure Test_Compresser_ficher(texte : in String) is
     begin

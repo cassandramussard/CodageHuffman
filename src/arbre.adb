@@ -1,4 +1,4 @@
-with Cellule_Exceptions;         use Cellule_Exceptions;
+with arbre_Exceptions;         use arbre_Exceptions;
 with Ada.Unchecked_Deallocation;
 
 package body arbre is

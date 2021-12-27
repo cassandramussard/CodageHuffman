@@ -3,9 +3,9 @@ with arbre;
 
 package codagehuffman is
 
-    package Cellule_Huffman is
-            new Cellule(T_Cle => Character, T_Donnee => Integer);
-    use Cellule_Huffman;
+    package Arbre_Huffman is
+            new arbre(T_Cle => Character, T_Donnee => Integer);
+    use Arbre_Huffman;
 
     type T_Tableau is limited private;
 
@@ -18,7 +18,7 @@ package codagehuffman is
     procedure  Tri_rapide(Tableau : in out T_Tableau ; premier : in Integer; dernier : in Integer);
 
     -- Construire l'arbre de Huffman gr�ce aux fr�quences des caract�res
-    function Construire_Arbre(Tableau : in T_Tableau) return T_Cellule;
+    procedure Construire_Arbre(Tableau : in T_Tableau; Arbre : out T_arbre);
 
     -- Décompresser le fichier
     function Decompresser_fichier(texte : in String) return String;

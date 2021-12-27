@@ -1,19 +1,22 @@
-[GENERATED OBJECT FILE]
-b__codagehuffman.o
+[MAPPING FILE]
+C:\Users\cruve\AppData\Local\Temp\GNAT-TEMP-000005.TMP
+[TOOLCHAIN VERSION]
+ada
+GNAT 2021
+[MAIN BASE NAME]
+codagehuffman
+[COMPILER PATH]
+c:\gnat\2021\bin\gcc.exe
+[COMPILER LEADING SWITCHES]
+-c
+-x
+ada
+-gnatA
+[MAIN DEPENDENCY FILE]
+C:\Users\cruve\github\CodageHuffman\obj\codagehuffman.ali
+[DEPENDENCY FILES]
+[BINDING OPTIONS]
+gnatbind_prefix=
 [PROJECT FILES]
-C:\Users\Remenby\github\CodageHuffman\codagehuffman.gpr
-20211209155630 2ba3aec7b083c856f799701b36aad8ce
-[BOUND OBJECT FILES]
-C:\Users\Remenby\github\CodageHuffman\obj\codagehuffman.o
-[GENERATED SOURCE FILES]
-b__codagehuffman.ads
-b__codagehuffman.adb
-b__codagehuffman.ali
-[RESULTING OPTIONS]
--LC:\Users\Remenby\github\CodageHuffman\obj\
--LC:\Users\Remenby\github\CodageHuffman\obj\
--LC:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/
--static
--static-libgcc
-C:/gnat/2021/lib/gcc/x86_64-w64-mingw32/10.3.1/adalib/libgnat.a
--Wl,--stack=0x2000000
+C:\Users\cruve\github\CodageHuffman\codagehuffman.gpr
+20211223110424 6a824e942f829d2189c14b71de7ba8d0

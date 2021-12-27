@@ -1,87 +1,137 @@
-V "GNAT Lib v9"
+V "GNAT Lib v2021"
 A -gnatA
-A -gnatc
-A -gnatwa
-A -gnaty3
-A -gnatya
-A -gnatyb
-A -gnatyc
-A -gnatye
-A -gnatyf
-A -gnatyh
-A -gnatyi
-A -gnatyk
-A -gnatyl
-A -gnatym
-A -gnatyn
-A -gnatyp
-A -gnatyr
-A -gnatys
-A -gnatyt
 A -mtune=generic
 A -march=x86-64
-P NO FX
+P SS ZX
 
 RN
-RV NO_DIRECT_BOOLEAN_OPERATORS
-RV NO_STANDARD_STORAGE_POOLS
+RV NO_RECURSION
+RV NO_SECONDARY_STACK
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
-RV SPARK_05
 
-U codagehuffman%s	codagehuffman.ads	d5c0c48f EE OO PK IL
+U codagehuffman%b	codagehuffman.adb	0adb1923 OO PK IL
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+Z arbre%s		arbre.adb		arbre.ali  ED
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U codagehuffman%s	codagehuffman.ads	4eb4adf5 BN EE NE OO PK IL
 W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
 W ada.strings%s		a-string.ads		a-string.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
-W cellule%s		cellule.adb		cellule.ali  ED
+Z ada.unchecked_deallocation%s
+W arbre%s		arbre.adb		arbre.ali
+Z arbre_exceptions%s	arbre_exceptions.ads	arbre_exceptions.ali
 
-D ada.ads		20200312110721 76789da1 ada%s
-D a-charac.ads		20200312110721 2d3ec45b ada.characters%s
-D a-chlat1.ads		20200312110721 66457d31 ada.characters.latin_1%s
-D a-finali.ads		20200312110721 bf4f806b ada.finalization%s
-D a-string.ads		20200312110721 90ac6797 ada.strings%s
-D a-strmap.ads		20200312110721 e8bb714a ada.strings.maps%s
-D a-strunb.ads		20200312110721 8098c91f ada.strings.unbounded%s
-D cellule.ads		20211215132830 8f9da19b cellule%s
-D codagehuffman.ads	20211215153126 dac5ac0b codagehuffman%s
-D system.ads		20200312110721 4635ec04 system%s
-D s-atocou.ads		20200312110721 b45c2d8d system.atomic_counters%s
-D s-finroo.ads		20200312110721 4ff27390 system.finalization_root%s
-D s-unstyp.ads		20200312110721 34867c83 system.unsigned_types%s
+D ada.ads		20210520051132 76789da1 ada%s
+D a-charac.ads		20210520051128 2d3ec45b ada.characters%s
+D a-chlat1.ads		20210520051128 66457d31 ada.characters.latin_1%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051128 bf4f806b ada.finalization%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-strmap.ads		20210520051130 5a88892a ada.strings.maps%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-strunb.ads		20210520051130 03325227 ada.strings.unbounded%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D a-uncdea.ads		20210520051130 c3a8ac65 ada.unchecked_deallocation%s
+D arbre.ads		20211220171200 1d641ffb arbre%s
+D arbre.adb		20211223111002 da9b59c9 arbre%b
+D arbre_exceptions.ads	20211223111114 fc4685c2 arbre_exceptions%s
+D codagehuffman.ads	20211223105444 50e2e029 codagehuffman%s
+D codagehuffman.adb	20211223105712 5a39f90a codagehuffman%b
+D interfac.ads		20210520051132 edec285f interfaces%s
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atocou.ads		20210520051132 b45c2d8d system.atomic_counters%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-finroo.ads		20210520051132 4ff27390 system.finalization_root%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-stratt.ads		20210520051134 7bdda3fa system.stream_attributes%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c s s s [s codagehuffman 4 1 none]
+G c Z s s [initialiser codagehuffman__arbre_huffman 9 14 6_5]
+G c Z s s [vider codagehuffman__arbre_huffman 11 14 6_5]
+G c Z s s [est_vide codagehuffman__arbre_huffman 15 13 6_5]
+G c Z s s [taille codagehuffman__arbre_huffman 18 13 6_5]
+G c Z s s [est_feuille codagehuffman__arbre_huffman 23 13 6_5]
+G c Z s s [cle_presente codagehuffman__arbre_huffman 26 13 6_5]
+G c Z s s [la_donnee codagehuffman__arbre_huffman 28 13 6_5]
+G c Z s s [enregistrer codagehuffman__arbre_huffman 32 14 6_5]
+G c Z s s [supprimer codagehuffman__arbre_huffman 36 14 6_5]
+G c Z s s [t_elementIP codagehuffman__arbre_huffman 52 9 6_5]
+G c Z s s [free codagehuffman__arbre_huffman 6 14 6_5]
+G c Z s b [calcul_frequence codagehuffman 14 15 none]
+G c Z s b [tri codagehuffman 16 14 none]
+G c Z s b [tri_rapide codagehuffman 18 16 none]
+G c Z s b [construire_arbre codagehuffman 21 15 none]
+G c Z s b [decompresser_fichier codagehuffman 24 14 none]
+G c Z s b [compresser_ficher codagehuffman 27 14 none]
+G c Z s s [Tt_tableauBIP codagehuffman 35 5 none]
+G c Z b b [afficher_arbre codagehuffman 59 14 none]
+G r i none [s codagehuffman 4 1 none] [arbre standard 5 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 9|1r6 1r33
-X 5 a-string.ads
-16K13*Strings 35e16 9|1r10 1r37
-X 7 a-strunb.ads
-76K21*Unbounded 491e26 9|1w18 1r45
-X 8 cellule.ads
-2+9 T_Cle 9|7r25
-3+9 T_Donnee 9|7r45
-5k9*Cellule 59e12 9|2w6 7r17
-6P9*T_Cellule 9|21r62[6]
-X 9 codagehuffman.ads
-4K9*codagehuffman 35E10 38l5 38e18
-6K13*Cellule_Huffman[8|5] 8r9
-10A10*T_Tableau(integer) 14r57 16r35 18r44 21r44 31r44 35c10
-14V14*Calcul_Frequence{10A10} 14>31
-14a31 texte{string}
-16V14*Tri{integer} 16=18 16>46 16>68
-16a18 Tableau{10A10}
-16i46 premier{integer}
-16i68 dernier{integer}
-18U16*Tri_rapide 18=27 18>56 18>78
-18a27 Tableau{10A10}
-18i56 premier{integer}
-18i78 dernier{integer}
-21V14*Construire_Arbre{8|6P9[6]} 21>31
-21a31 Tableau{10A10}
-24V14*Decompresser_fichier{string} 24>35
-24a35 texte{string}
-27V14*Compresser_ficher{string} 27>32
-27a32 texte{string}
+16K9*Ada 20e8 18|1r6 1r33
+X 7 a-string.ads
+16K13*Strings 35e16 18|1r10 1r37
+X 10 a-strunb.ads
+83K21*Unbounded 765e26 18|1w18 1r45
+X 15 arbre.ads
+2+9 T_Cle 18|7r23
+3+9 T_Donnee 18|7r43
+5k9*arbre 59e10 18|2w6 7r17
+6P9*T_arbre 18|21r68[6] 19|54r67[18|6] 59r40[18|6]
+9U14*Initialiser 19|56s7[18|6]
+X 18 codagehuffman.ads
+4K9*codagehuffman 35E10 38l5 38e18 19|1b14 83l5 83t18
+6K13*Arbre_Huffman[15|5] 8r9
+10A10*T_Tableau(integer) 16r35 18r44 21r45 31r44 35c10 19|4r17 17r34 39r42
+. 54r44 74r43
+14U15*Calcul_Frequence 14>32 19|3b14 14l8 14t24
+14a32 texte{string} 19|3b31 10r16 11r32 11r68
+16V14*Tri{integer} 16=18 16>46 16>68 19|17b13 37l8 37t11 44s22
+16a18 Tableau{10A10} 19|17b17 22r16 25r13 27m13 27r31 28m13 28r27 34m7 34r27
+. 35m7 35r27
+16i46 premier{integer} 19|17b45 21r16 24r16
+16i68 dernier{integer} 19|17b67 22r24 24r25 34r35 35r15
+18U16*Tri_rapide 18=27 18>56 18>78 19|39b14 45s10 46s10 52l8 52t18
+18a27 Tableau{10A10} 19|39b25 44m26 44r26 45m21 46m21
+18i56 premier{integer} 19|39b54 43r10 44r35 45r30
+18i78 dernier{integer} 19|39b76 43r20 44r44 46r42
+21U15*Construire_Arbre 21>32 21<56 19|54b14 57l8 57t24
+21a32 Tableau{10A10} 19|54b31
+21p56 Arbre{15|6P9[6]} 19|54b55 56m19
+24V14*Decompresser_fichier{string} 24>35 19|69b13 72l8 72t28
+24a35 texte{string} 19|69b34
+27V14*Compresser_ficher{string} 27>32 19|64b13 67l8 67t25
+27a32 texte{string} 19|64b31
 30U24 Traiter 30>32 30>56
 30i32 Frequence{integer}
 30e56 Caractere{character}
-31u15*Parcours_infixe 31>31
-31a31 Tableau{10A10}
+31u15*Parcours_infixe 31>31 19|74b14 77l8 77t23
+31a31 Tableau{10A10} 19|74b30
+X 19 codagehuffman.adb
+4a7 Tableau{18|10A10} 7m10 11m10 11r46
+6i11 i{integer} 7r18
+10i11 i{integer} 11r38 11r74
+18i7 Index{integer} 21m7 26m13 26r22 27r21 28r35 34r15 35r35 36r14
+19i7 Pivot{integer} 22m7 25r26
+24i11 i{integer} 25r21 27r39 28r21
+40i7 variable{integer} 44m10 45r39 46r30
+59U14 Afficher_Arbre 59b14 59>29 62l8 62t22
+59p29 arbre{15|6P9[18|6]}
 
