@@ -1,111 +1,31 @@
 package body codagehuffman is
 
-<<<<<<< HEAD
-   procedure Calcul_Frequence(texte : in String) is
+   function Calcul_Frequence(texte : in String) return T_Tableau is
       Tableau : T_Tableau;
    begin
-      for i in 0..256 loop
-         Tableau(i) := 0;
+      for i in 1..128 loop
+         Enregistrer(Tableau(i),Character'Val(i),i);
       end loop ;
 
       for i in texte'range loop
-         Tableau(Character'Pos(texte(i))) := Tableau(Character'Pos(texte(i))) + 1;
+         Enregistrer(Tableau(Character'Pos(texte(i))), Tableau(Character'Pos(texte(i))).All.Cle, Tableau(Character'Pos(texte(i))).All.Donnee + 1);
       end loop;
 
+      return Tableau;
    end Calcul_Frequence;
 
-
-   function Tri(Tableau : in out T_Tableau; premier : in Integer; dernier : in Integer) return Integer is
-      Index : Integer;
-      Pivot : Integer;
+   procedure Tri_Rapide(Tableau : in out T_Tableau) is
    begin
-      Index := premier-1;
-      Pivot := Tableau(dernier);
+      Null;
+   end Tri_Rapide;
 
-      for i in premier..dernier loop
-         if Tableau(i)<= Pivot then
-            Index := Index +1;
-            Tableau(Index) := Tableau(i);
-            Tableau(i) := Tableau(Index);
-         else
-=======
-    procedure Calcul_Frequence(texte : in String) is
-        Tableau : T_Tableau;
-    begin
-        for i in 0..256 loop
-            Tableau(i) := 0;
-        end loop ;
-
-        for i in texte'range loop
-            Tableau(Character'Pos(texte(i))) := Tableau(Character'Pos(texte(i))) + 1;
-        end loop;
-
-    end Calcul_Frequence;
-
-
-    function Tri(Tableau : in out T_Tableau; premier : in Integer; dernier : in Integer) return Integer is
-        Index : Integer;
-        Pivot : Integer;
-    begin
-        Index := premier-1;
-        Pivot := Tableau(dernier);
-
-        for i in premier..dernier loop
-            if Tableau(i)<= Pivot then
-                Index := Index +1;
-                Tableau(Index) := Tableau(i);
-                Tableau(i) := Tableau(Index);
-            else
-                null;
-            end if;
-
-        end loop;
-        Tableau(Index+1) := Tableau(dernier);
-        Tableau(dernier) := Tableau(Index+1);
-        return Index +1 ;
-    end Tri;
-
-    procedure Tri_rapide(Tableau : in out T_Tableau ; premier : in Integer; dernier : in Integer) is
-        variable : Integer;
-
-    begin
-        if premier < dernier then
-            variable := Tri(Tableau, premier, dernier);
-            Tri_rapide(Tableau, premier, variable-1);
-            Tri_rapide(Tableau, variable+1, dernier);
-
-        else
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
-            null;
-         end if;
-
-      end loop;
-      Tableau(Index+1) := Tableau(dernier);
-      Tableau(dernier) := Tableau(Index+1);
-      return Index +1 ;
-   end Tri;
-
-   procedure Tri_rapide(Tableau : in out T_Tableau ; premier : in Integer; dernier : in Integer) is
-      variable : Integer;
-
+   procedure Construire_Arbre(Tableau : in out T_Tableau) is
+      Cellule : T_Cellule;
    begin
-      if premier < dernier then
-         variable := Tri(Tableau, premier, dernier);
-         Tri_rapide(Tableau, premier, variable-1);
-         Tri_rapide(Tableau, variable+1, dernier);
-
-      else
-         null;
-      end if;
-
-   end Tri_rapide;
-
-   procedure Construire_Arbre(Tableau : in T_Tableau; Arbre : out T_arbre) is
-   begin
-      Initialiser(arbre);
+      Initialiser(Cellule);
    end Construire_Arbre;
 
-   procedure Afficher_Arbre(arbre : in T_arbre) is
+   procedure Afficher_Arbre(Cellule : in T_Cellule) is
    begin
       Null;
    end Afficher_Arbre;

@@ -1,4 +1,15 @@
 test_arbre.adb:67:01: error: aspect specifications not allowed here
 test_arbre.adb:68:01: error: "with" can only appear in context clause
 test_arbre.adb:71:06: warning: "arbre" is not a valid aspect identifier [enabled by default]
-test_arbre.adb:133:17: error: missing "begin" for procedure "Construire_Exemple_Sujet" at line 66
+test_arbre.adb:73:92: error: "is" should be ";"
+test_arbre.adb:138:17: error: declaration expected
+test_arbre.adb:139:17: error: declaration expected
+test_arbre.adb:140:17: error: declaration expected
+test_arbre.adb:141:17: error: declaration expected
+test_arbre.adb:143:17: error: declaration expected
+test_arbre.adb:144:17: error: declaration expected
+test_arbre.adb:145:09: error: "end Construire_Exemple_Sujet;" expected
+test_arbre.adb:317:09: error: "end Tester_La_Frequence_Erreur;" expected
+test_arbre.adb:376:17: error: missing "begin" for procedure "Construire_Exemple_Sujet" at line 66
+test_arbre.adb:377:09: error: "end Construire_Exemple_Sujet;" expected
+test_arbre.adb:391:01: error: "end Test_arbre;" expected

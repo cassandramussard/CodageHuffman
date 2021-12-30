@@ -1,0 +1,2 @@
+codagehuffman.adb:52:07: error: no "loop" for this "end loop"
+codagehuffman.adb:56:04: error: "end Tri_rapide;" expected

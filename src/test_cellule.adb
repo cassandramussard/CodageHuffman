@@ -1,14 +1,14 @@
 with Ada.Text_IO;           use Ada.Text_IO;
 with Ada.Integer_Text_IO;   use Ada.Integer_Text_IO;
-with arbre_Exceptions; 		use arbre_Exceptions;
+with cellule_Exceptions; 		use Cellule_Exceptions;
 with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-with arbre;
+with cellule;
 
-procedure Test_arbre is
+procedure Test_Cellule is
 
-	package arbre_String_Integer is
-		new arbre(T_Cle => Unbounded_String, T_Donnee => Integer);
-	use arbre_String_Integer;
+	package Cellule_String_Integer is
+		new Cellule(T_Cle => Unbounded_String, T_Donnee => Integer);
+	use Cellule_String_Integer;
 
 
 	-- Retourner une chaîne avec des guillemets autour de S
@@ -63,68 +63,31 @@ procedure Test_arbre is
 	-- Attention, c'est à l'appelant de lib�rer la m�moire associ�e en
 	-- utilisant Vider.
 	-- Si Bavard est vrai, les insertions sont trac�es (affich�es).
-<<<<<<< HEAD
-	procedure Construire_Exemple_Sujet (Annuaire : out T_arbre; Bavard: Boolean := False) is
-with arbre_exceptions; 		use arbre_Exceptions;
-with Ada.Strings.Unbounded; use Ada.Strings.Unbounded;
-	--! Les Unbounded_String ont une capacité variable, contrairement au String
-	--! pour lesquelles une capacité doit être fixée.
-with arbre;
-
-=======
-	procedure Construire_Exemple_Sujet (Arbre : out T_arbre; Bavard: Boolean := False) is
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
-  Caractere : constant array (1..7) of Character
-			:= ('a', 'm', 'e', 'l', 'r');
-  Frequence : constant array (1..7) of Integer
-			:= (18, 10, 20, 5, 8);
-  --Tableau
-
-  procedure Afficher (S : in Character; N: in Integer) is
-  	begin
-  		Put (S);
-  		Put (" : ");
-  		Put (N, 1);
-  		New_Line;
-      end Afficher;
-	-- Initialiser l'annuaire avec les Donnees et Cles ci-dessus.
-	-- Attention, c'est à l'appelant de libérer la mémoire associée en
-	-- utilisant Vider.
-	-- Si Bavard est vrai, les insertions sont tracées (affichées).
-	procedure Construire_Exemple_Sujet (arbre : out T_arbre; Bavard: Boolean := False) is
+	procedure Construire_Exemple_Sujet (Annuaire : out T_Cellule; Bavard: Boolean := False) is
 	begin
-		Initialiser (Arbre);
-		pragma Assert (Est_Vide (Arbre));
+		Initialiser (Annuaire);
+		pragma Assert (Est_Vide (Annuaire));
+		pragma Assert (Taille (Annuaire) = 0);
 
-
-		for I in 1..7 loop
-			Enregistrer (Arbre, Frequence(I), Caractere(I));
+		for I in 1..Nb_Cles loop
+			Enregistrer(Annuaire, Cles (I), Donnees (I));
 
 			if Bavard then
 				Put_Line ("Après insertion de la cle " & Cles (I));
-<<<<<<< HEAD
 				Afficher (Annuaire); New_Line;
-				Put_Line ("Après insertion du caractere " & Caractere(I));
-				Afficher (arbre); New_Line;
-=======
-				Afficher (Arbre); New_Line;
-				Put_Line ("Après insertion du caractere " & Caractere(I));
-				Afficher (Arbre);
-				New_Line;
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
 			else
 				null;
 			end if;
 
-			pragma Assert (not Est_Vide (arbre));
-
+			pragma Assert (not Est_Vide(Annuaire));
+			pragma Assert (Taille (Annuaire) = I);
 
 			for J in 1..I loop
-				pragma Assert (Frequence(Arbre, Caractere(J)) = Frequence(J));
+				pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
 			end loop;
 
-			for J in I+1..7 loop
-				pragma Assert (not Caractere_Present(Arbre, Caractere(J)));
+			for J in I+1..Nb_Cles loop
+				pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
 			end loop;
 
 		end loop;
@@ -132,9 +95,8 @@ with arbre;
 
 
 	procedure Tester_Exemple_Sujet is
-		Arbre : T_arbre;
+		Annuaire : T_Cellule;
 	begin
-<<<<<<< HEAD
 		Put_Line ("=== Tester_Exemple_Sujet..."); New_Line;
 		Construire_Exemple_Sujet (Annuaire, True);
 		Vider (Annuaire);
@@ -142,155 +104,127 @@ with arbre;
 
 
 	-- Tester suppression en commençant par les derniers �l�ments ajout�s
-		Construire_Exemple_Sujet (arbre, True);
-		Vider (arbre);
-=======
-		Put_Line ("=== Tester_Exemple_Sujet...");
-		New_Line;
-	-- Tester suppression en commençant par les derniers �l�ments ajout�s
-		Construire_Exemple_Sujet (Arbre, True);
-		Vider (Arbre);
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
-	end Tester_Exemple_Sujet;
-
-
-	-- Tester suppression en commençant par les derniers éléments ajoutés
 	procedure Tester_Supprimer_Inverse is
-		Arbre : T_arbre;
+		Annuaire : T_Cellule;
 	begin
 		Put_Line ("=== Tester_Supprimer_Inverse..."); New_Line;
 
-		Construire_Exemple_Sujet (Arbre);
+		Construire_Exemple_Sujet (Annuaire);
 
-		for I in reverse 1..7 loop
-<<<<<<< HEAD
+		for I in reverse 1..Nb_Cles loop
 
 			Supprimer (Annuaire, Cles (I));
 			Put_Line("Ok");
-			Supprimer (arbre, Caractere(I));
 
-=======
-			Supprimer (Arbre, Cles (I));
-			Put_Line("Ok");
-			Supprimer (Arbre, Caractere(I));
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
-			Put_Line ("Après suppression de " & Caractere (I) & " :");
-			Afficher (Arbre); New_Line;
+			Put_Line ("Après suppression de " & Cles (I) & " :");
+			Afficher (Annuaire); New_Line;
 
 			for J in 1..I-1 loop
-				pragma Assert (Caractere_Present(Arbre, Caractere(J)));
-				pragma Assert (La_Frequence(Arbre, Caractere(J)) = Frequence(J));
+				pragma Assert (Cle_Presente (Annuaire, Cles (J)));
+				pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
 			end loop;
 
-			for J in I..7 loop
-				pragma Assert (not Caractere_Present(Arbre, Caractere (J)));
+			for J in I..Nb_Cles loop
+				pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
 			end loop;
 		end loop;
 
-		Vider (Arbre);
+		Vider (Annuaire);
 	end Tester_Supprimer_Inverse;
 
 
 	-- Tester suppression en commençant les les premiers �l�ments ajout�s
-	-- Tester suppression en commençant les les premiers éléments ajoutés
 	procedure Tester_Supprimer is
-		Arbre : T_arbre;
+		Annuaire : T_Cellule;
 	begin
 		Put_Line ("=== Tester_Supprimer..."); New_Line;
 
-		Construire_Exemple_Sujet (Arbre);
+		Construire_Exemple_Sujet (Annuaire);
 
-		for I in 1..7 loop
-			Put_Line ("Suppression de " & Caractere (I) & " :");
+		for I in 1..Nb_Cles loop
+			Put_Line ("Suppression de " & Cles (I) & " :");
 
-			Supprimer (Arbre, Caractere(I));
+			Supprimer (Annuaire, Cles (I));
 
-			Afficher (Arbre); New_Line;
+			Afficher (Annuaire); New_Line;
 
 			for J in 1..I loop
-				pragma Assert (not Caractere_Present(Arbre, Caractere (J)));
+				pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
 			end loop;
 
-			for J in I+1..7 loop
-				pragma Assert (Caractere_Present(Arbre,Caractere(J)));
-				pragma Assert (La_Frequence(Arbre, Caractere(J)) = Frequence (J));
+			for J in I+1..Nb_Cles loop
+				pragma Assert (Cle_Presente (Annuaire, Cles (J)));
+				pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
 			end loop;
 		end loop;
 
-		Vider (Arbre);
+		Vider (Annuaire);
 	end Tester_Supprimer;
 
 
 	procedure Tester_Supprimer_Un_Element is
-<<<<<<< HEAD
 
 		-- Tester supprimer sur un �l�ment, celui à Indice dans Cles.
-=======
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
-		-- Tester supprimer sur un élément, celui à Indice dans Cles.
 		procedure Tester_Supprimer_Un_Element (Indice: in Integer) is
-			Arbre : T_arbre;
+			Annuaire : T_Cellule;
 		begin
-			Construire_Exemple_Sujet (Arbre);
+			Construire_Exemple_Sujet (Annuaire);
 
-			Put_Line ("Suppression de " & Caractere (Indice) & " :");
-			Supprimer (Arbre, Caractere (Indice));
+			Put_Line ("Suppression de " & Cles (Indice) & " :");
+			Supprimer (Annuaire, Cles (Indice));
 
-			Afficher (Arbre); New_Line;
+			Afficher (Annuaire); New_Line;
 
-			for J in 1..7 loop
+			for J in 1..Nb_Cles loop
 				if J = Indice then
-					pragma Assert (not Caractere_Present (Arbre, Caractere(J)));
+					pragma Assert (not Cle_Presente (Annuaire, Cles (J)));
 				else
-					pragma Assert (Caractere_Present (Arbre, Caractere(J)));
+					pragma Assert (Cle_Presente (Annuaire, Cles (J)));
 				end if;
 			end loop;
 
-			Vider (Arbre);
+			Vider (Annuaire);
 		end Tester_Supprimer_Un_Element;
 
 	begin
 		Put_Line ("=== Tester_Supprimer_Un_Element..."); New_Line;
 
-		for I in 1..7 loop
+		for I in 1..Nb_Cles loop
 			Tester_Supprimer_Un_Element (I);
 		end loop;
 	end Tester_Supprimer_Un_Element;
 
 
 	procedure Tester_Remplacer_Un_Element is
-<<<<<<< HEAD
 
-=======
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
-		-- Tester enregistrer sur un élément présent, celui à Indice dans Cles.
+		-- Tester enregistrer sur un �l�ment pr�sent, celui à Indice dans Cles.
 		procedure Tester_Remplacer_Un_Element (Indice: in Integer; Nouveau: in Integer) is
-			Arbre : T_arbre;
+			Annuaire : T_Cellule;
 		begin
-			Construire_Exemple_Sujet (Arbre);
+			Construire_Exemple_Sujet (Annuaire);
 
-			Put_Line ("Remplacement de " & Caractere(Indice)
+			Put_Line ("Remplacement de " & Cles (Indice)
 					& " par " & Integer'Image(Nouveau) & " :");
-			Enregistrer(Arbre, Caractere(Indice), Nouveau);
+			enregistrer (Annuaire, Cles (Indice), Nouveau);
 
-			Afficher (Arbre); New_Line;
+			Afficher (Annuaire); New_Line;
 
-			for J in 1..7 loop
-				pragma Assert (Caractere_Present (Arbre, Caractere(J)));
+			for J in 1..Nb_Cles loop
+				pragma Assert (Cle_Presente (Annuaire, Cles (J)));
 				if J = Indice then
-					pragma Assert (La_Frequence (Arbre, Caractere(J)) = Nouveau);
+					pragma Assert (La_Donnee (Annuaire, Cles (J)) = Nouveau);
 				else
-					pragma Assert (La_Frequence (Arbre, Caractere (J)) = Frequence (J));
+					pragma Assert (La_Donnee (Annuaire, Cles (J)) = Donnees (J));
 				end if;
 			end loop;
 
-			Vider (Arbre);
+			Vider (Annuaire);
 		end Tester_Remplacer_Un_Element;
 
 	begin
 		Put_Line ("=== Tester_Remplacer_Un_Element..."); New_Line;
 
-		for I in 1..7 loop
+		for I in 1..Nb_Cles loop
 			Tester_Remplacer_Un_Element (I, 0);
 			null;
 		end loop;
@@ -298,51 +232,49 @@ with arbre;
 
 
 	procedure Tester_Supprimer_Erreur is
-		Arbre : T_arbre;
+		Annuaire : T_Cellule;
 	begin
 		begin
 			Put_Line ("=== Tester_Supprimer_Erreur..."); New_Line;
 
-			Construire_Exemple_Sujet (Arbre);
-			Supprimer (Arbre, Inconnu);
+			Construire_Exemple_Sujet (Annuaire);
+			Supprimer (Annuaire, Inconnu);
 
 		exception
-			when Caractere_Absente_Exception =>
+			when Cle_Absente_Exception =>
 				null;
 			when others =>
 				pragma Assert (False);
 		end;
-		Vider (Arbre);
+		Vider (Annuaire);
 	end Tester_Supprimer_Erreur;
 
 
-	procedure Tester_La_Frequence_Erreur is
-		Arbre: T_arbre;
+	procedure Tester_La_Donnee_Erreur is
+		Annuaire : T_Cellule;
 		Inutile: Integer;
 	begin
 		begin
-			Put_Line ("=== Tester_La_Frequence_Erreur..."); New_Line;
+			Put_Line ("=== Tester_La_Donnee_Erreur..."); New_Line;
 
-			Construire_Exemple_Sujet (Arbre);
-			Inutile := La_Donnee (Arbre, Inconnu);
+			Construire_Exemple_Sujet (Annuaire);
+			Inutile := La_Donnee (Annuaire, Inconnu);
 
 		exception
-			when Caractere_Absente_Exception =>
+			when Cle_Absente_Exception =>
 				null;
 			when others =>
 				pragma Assert (False);
 		end;
-<<<<<<< HEAD
 		Vider (Annuaire);
-=======
-		Vider (Arbre);
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
 	end Tester_La_Donnee_Erreur;
 
 
 	procedure Tester_Parcours_Infixe is
-		Arbre : T_arbre;
+		Annuaire : T_Cellule;
+
 		Somme: Integer;
+
 		procedure Sommer(Cle: in out Unbounded_String; Donnee: in out Integer) is
 		begin
 			Put (" + ");
@@ -355,19 +287,18 @@ with arbre;
 			new Parcours_Infixe(Sommer);
 
 	begin
-		Put_Line ("=== Tester_Pour_Chaque...");
-		New_Line;
-		Construire_Exemple_Sujet(Arbre);
+		Put_Line ("=== Tester_Pour_Chaque..."); New_Line;
+		Construire_Exemple_Sujet(Annuaire);
 		Somme := 0;
-		Sommer (Arbre);
+		Sommer (Annuaire);
 		pragma Assert (Somme = Somme_Donnees);
-		Vider(Arbre);
+		Vider(Annuaire);
 		New_Line;
 	end Tester_Parcours_Infixe;
 
 
 	procedure Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q is
-		Arbre : T_arbre;
+		Annuaire : T_Cellule;
 
 		Somme: Integer;
 
@@ -391,24 +322,13 @@ with arbre;
 		Put_Line ("=== Tester_Pour_Chaque_Somme_Si_Cle_Commence_Par_Q..."); New_Line;
 		Construire_Exemple_Sujet(Annuaire);
 		Somme := 0;
-		Sommer (Arbre);
+		Sommer (Annuaire);
 		pragma Assert (Somme = Somme_Donnees_Q);
-		Vider(Arbre);
+		Vider(Annuaire);
 		New_Line;
 	end Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-<<<<<<< HEAD
-		Vider (arbre);
-	end Tester_La_Frequence_Erreur;
 
 
-
-
-=======
-		Vider (Arbre);
-	end Tester_La_Frequence_Erreur;
-
-
->>>>>>> 52604b83de745770c6dba14fcc5295b38162d451
 begin
 	Tester_Exemple_Sujet;
 	Tester_Supprimer_Inverse;
@@ -419,6 +339,5 @@ begin
 	Tester_La_Donnee_Erreur;
 	Tester_Parcours_Infixe;
 	Tester_Parcours_Infixe_Somme_Si_Cle_Commence_Par_Q;
-	Tester_La_DFrequence_Erreur;
 	Put_Line ("Fin des tests : OK.");
-end Test_LCA;
+end Test_Cellule;

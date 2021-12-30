@@ -1,0 +1,5 @@
+test_codagehuffman.adb:19:30: error: "Parcours_infixe" is not visible
+test_codagehuffman.adb:19:30: error: non-visible declaration at codagehuffman.ads:32
+test_codagehuffman.adb:19:30: error: non-visible declaration at arbre.ads:43, instance at codagehuffman.ads:6
+test_codagehuffman.adb:26:21: error: "Calcul_Frequence" is not visible
+test_codagehuffman.adb:26:21: error: non-visible declaration at codagehuffman.ads:14
