@@ -1,0 +1,74 @@
+V "GNAT Lib v9"
+A -gnatA
+A -gnatc
+A -gnatwa
+A -gnaty3
+A -gnatya
+A -gnatyb
+A -gnatyc
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatym
+A -gnatyn
+A -gnatyp
+A -gnatyr
+A -gnatys
+A -gnatyt
+A -mtune=generic
+A -march=x86-64
+P NO FX
+
+RN
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U arbre%s		arbre.ads		1d641ffb EE OO PK GE IL
+
+D arbre.ads		20211215163802 1d641ffb arbre%s
+X 1 arbre.ads
+2+9 T_Cle 26r56 28r52 32r60 36r58 42r46 54r16
+3+9 T_Donnee 28r66 32r80 42r68 55r19
+5k9*arbre 2z9 3z9 48E9 59l5 59e10
+6P9*T_arbre 9r38 11r35 15r33 18r32 23r36 26r37 28r34 32r41 36r39 43r47 50c9
+. 56r24 57r23
+9U14*Initialiser 9<26
+9p26 arbre{6P9}
+11U14*Vider 11=20
+11p20 arbre{6P9} 12r24
+15V13*Est_Vide{boolean} 12s14 15>22 20s32
+15p22 arbre{6P9}
+18V13*Taille{integer} 18>21 19r14 20r11 37s15 37s32
+18p21 arbre{6P9} 20r42
+23V13*Est_Feuille{boolean} 23>25
+23p25 arbre{6P9}
+26V13*Cle_Presente{boolean} 26>26 26>47 38s14
+26p26 arbre{6P9}
+26*47 Cle{2+9}
+28V13*La_Donnee{3+9} 28>23 28>43
+28p23 arbre{6P9}
+28*43 Cle{2+9}
+32U14*Enregistrer 32=26 32>51 32>68
+32p26 arbre{6P9}
+32*51 Cle{2+9}
+32*68 Donnee{3+9}
+36U14*Supprimer 36=24 36>49
+36p24 arbre{6P9} 37r23 37r40 38r28
+36*49 Cle{2+9} 38r35
+42U24 Traiter 42=33 42=53
+42*33 Cle{2+9}
+42*53 Donnee{3+9}
+43u16*Parcours_Infixe 43=32
+43p32 arbre{6P9}
+48R9 T_Element 50r27 52c9 58e17
+54*10 Cle{2+9}
+55*10 Donnee{3+9}
+56p10 Fils_gauche{6P9}
+57p10 Fils_droit{6P9}
+
